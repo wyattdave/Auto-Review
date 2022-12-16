@@ -1,0 +1,107 @@
+{
+  "sReference":"Replace with your reference",
+  "aScoringTemplate":[
+    {
+      "Name":"exceptionScope",
+      "Score":10,
+      "Note":"score added for exception scope"
+    },
+    {
+      "Name":"mainScope",
+      "Score":10,
+      "Note":"score added for main scope"
+    },
+    {
+      "Name":"varNaming",
+      "Score":10,
+      "Note":"score added for following variable naming convention (see aRatingsTemplate)"
+    },
+    {
+      "Name":"varUsed",
+      "Score":5,
+      "Note":"score added for if all variables used"
+    },
+    {
+      "Name":"varConstant",
+      "Score":5,
+      "Note":"score added for naming variables with value in all capitals"
+    },
+    {
+      "Name":"variables",
+      "Score":10,
+      "Note":"score given for variables before deductions"
+    },
+    {
+      "Name":"variablesMin",
+      "Score":0,
+      "Note":"minimum allowed variables before deductions"
+    },
+    {
+      "Name":"variablesDeduction",
+      "Score":1,
+      "Note":"score added for exception scope"
+    },
+    {
+      "Name":"composes",
+      "Score":10,
+      "Note":"score given for composes before deductions"
+    },
+    {
+      "Name":"composesMin",
+      "Score":0,
+      "Note":"minimum allowed composes before deductions"
+    },
+    {
+      "Name":"composesDeduction",
+      "Score":5,
+      "Note":"score deducted for every scope used"
+    },
+    {
+      "Name":"connections",
+      "Score":10,
+      "Note":"score given for connections before deductions"
+    },
+    {
+      "Name":"connectionsMin",
+      "Score":3,
+      "Note":"minimum allowed connections before deductions"
+    },
+    {
+      "Name":"connectionsDeduction",
+      "Score":2,
+      "Note":"score deducted for every connections used"
+    },
+
+    {
+      "Name":"complexityRed",
+      "Score":0,
+      "Note":"score added for red scoring complexity"
+    },
+    {
+      "Name":"complexityAmber",
+      "Score":15,
+      "Note":"score added for amber scoring complexity"
+    },
+    {
+      "Name":"complexityGreen",
+      "Score":20,
+      "Note":"score added green scoring complexity"
+    },
+
+    {
+      "Name":"actionsRed",
+      "Score":0,
+      "Note":"score added for red scoring actions"
+    },
+    {
+      "Name":"actionsAmber",
+      "Score":5,
+      "Note":"score added for amber scoring actions"
+    },
+    {
+      "Name":"actionsGreen",
+      "Score":10,
+      "Note":"score added green scoring actions"
+    }
+  ]
+}

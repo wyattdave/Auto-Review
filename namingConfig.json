@@ -1,0 +1,15 @@
+{
+  "oNamingTemplate": 
+    {
+      "sReference":"Replace with your reference",
+      "char":1,
+      "data": [
+          { "Type": "boolean", "Letter": "b" }, 
+          { "Type": "string", "Letter": "s" },
+          { "Type": "integer","Letter": "i" },
+          { "Type": "float", "Letter": "f" },
+          { "Type": "object", "Letter": "o" },
+          { "Type": "array", "Letter": "a" }
+        ]
+    }
+}

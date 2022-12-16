@@ -1,0 +1,257 @@
+{
+  "sReference":"Replace with your reference",
+  "aComplexityTemplate": [
+    {
+      "Name": "GetItemsshared_sharepointonline",
+      "Complexity": 1
+    },
+    {
+      "Name": "CopyFileAsyncshared_sharepointonline",
+      "Complexity": 1
+    },
+    {
+      "Name": "GetFileContentshared_sharepointonline",
+      "Complexity": 1
+    },
+    {
+      "Name": "GetFileContentByPathshared_sharepointonline",
+      "Complexity": 1
+    },
+    {
+      "Name": "HttpRequestshared_sharepointonline",
+      "Complexity": 5
+    },
+    {
+      "Name": "DeleteFileshared_sharepointonline",
+      "Complexity": 1
+    },
+    {
+      "Name": "ConvertFileshared_onedriveforbusiness",
+      "Complexity": 2
+    },
+    {
+      "Name": "ConvertFileByPathshared_onedriveforbusiness",
+      "Complexity": 1
+    },
+    {
+      "Name": "CopyDriveFileshared_onedriveforbusiness",
+      "Complexity": 1
+    },
+    {
+      "Name": "CopyDriveFileByPathshared_onedriveforbusiness",
+      "Complexity": 1
+    },
+    {
+      "Name": "ListFolderV2shared_onedriveforbusiness",
+      "Complexity": 1
+    },
+    {
+      "Name": "ListRootFoldershared_onedriveforbusiness",
+      "Complexity": 1
+    },
+    {
+      "Name": "DeleteFileshared_onedriveforbusiness",
+      "Complexity": 1
+    },
+    {
+      "Name": "GetItemsshared_excelonlinebusiness",
+      "Complexity": 1
+    },
+    {
+      "Name": "PatchItemshared_excelonlinebusiness",
+      "Complexity": 1
+    },
+    {
+      "Name": "RunScriptProdshared_excelonlinebusiness",
+      "Complexity": 5
+    },
+    {
+      "Name": "ListGroupMembersshared_office365groups",
+      "Complexity": 1
+    },
+    {
+      "Name": "SharedMailboxSendEmailV2shared_office365",
+      "Complexity": 1
+    },
+    {
+      "Name": "StartAndWaitForAnApprovalshared_approvals",
+      "Complexity": 2
+    },
+    {
+      "Name": "ApiConnection",
+      "Complexity": 2
+    },
+    {
+      "Name": "ApiConnectionWebhook",
+      "Complexity": 2
+    },
+    {
+      "Name": "ApiManagement",
+      "Complexity": 2
+    },
+    {
+      "Name": "AppendToArrayVariable",
+      "Complexity": 2
+    },
+    {
+      "Name": "AppendToStringVariable",
+      "Complexity": 2
+    },
+    {
+      "Name": "Batch",
+      "Complexity": 5
+    },
+    {
+      "Name": "Compose",
+      "Complexity": 2
+    },
+    {
+      "Name": "DecrementVariable",
+      "Complexity": 2
+    },
+    {
+      "Name": "Expression",
+      "Complexity": 2
+    },
+    {
+      "Name": "FlatFileDecoding",
+      "Complexity": 5
+    },
+    {
+      "Name": "FlatFileEncoding",
+      "Complexity": 5
+    },
+    {
+      "Name": "Foreach",
+      "Complexity": 4
+    },
+    {
+      "Name": "Function",
+      "Complexity": 5
+    },
+    {
+      "Name": "Http",
+      "Complexity": 5
+    },
+    {
+      "Name": "HttpWebhook",
+      "Complexity": 5
+    },
+    {
+      "Name": "If",
+      "Complexity": 3
+    },
+    {
+      "Name": "IncrementVariable",
+      "Complexity": 2
+    },
+    {
+      "Name": "InitializeVariable",
+      "Complexity": 1
+    },
+    {
+      "Name": "IntegrationAccountArtifactLookup",
+      "Complexity": 5
+    },
+    {
+      "Name": "Join",
+      "Complexity": 3
+    },
+    {
+      "Name": "Liquid",
+      "Complexity": 5
+    },
+    {
+      "Name": "ParseJson",
+      "Complexity": 3
+    },
+    {
+      "Name": "Query",
+      "Complexity": 3
+    },
+    {
+      "Name": "Recurrence",
+      "Complexity": 5
+    },
+    {
+      "Name": "Request",
+      "Complexity": 1
+    },
+    {
+      "Name": "Response",
+      "Complexity": 1
+    },
+    {
+      "Name": "Scope",
+      "Complexity": -1
+    },
+    {
+      "Name": "Select",
+      "Complexity": 3
+    },
+    {
+      "Name": "SendToBatch",
+      "Complexity": 5
+    },
+    {
+      "Name": "SetVariable",
+      "Complexity": 2
+    },
+    {
+      "Name": "SlidingWindow",
+      "Complexity": 5
+    },
+    {
+      "Name": "Switch",
+      "Complexity": 4
+    },
+    {
+      "Name": "Table",
+      "Complexity": 2
+    },
+    {
+      "Name": "Terminate",
+      "Complexity": -1
+    },
+    {
+      "Name": "Until",
+      "Complexity": 4
+    },
+    {
+      "Name": "Wait",
+      "Complexity": 1
+    },
+    {
+      "Name": "Workflow",
+      "Complexity": 5
+    },
+    {
+      "Name": "XmlValidation",
+      "Complexity": 3
+    },
+    {
+      "Name": "Xslt",
+      "Complexity": 3
+    },
+    {
+      "Name": "OpenApiConnection",
+      "Complexity": 1
+    },
+    {
+      "Name": "Ai connection",
+      "Complexity": 5
+    },
+    {
+      "Name": "loop till",
+      "Complexity": 4
+    },
+    {
+      "Name": "OpenApiConnectionWebhook",
+      "Complexity": 2
+    },
+    {
+      "Name": "Do_until",
+      "Complexity": 4
+    }
+   ]
+}

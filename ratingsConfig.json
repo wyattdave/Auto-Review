@@ -1,0 +1,13 @@
+{
+  "sReference":"Replace with your reference",
+  "oRatingsTemplate":{
+    "complexityAm":50,
+    "complexityRe":100,
+    "actionsAm":30,
+    "actionsRe":50,
+    "variablesAm":3,
+    "variablesRe":5,
+    "exceptionsAm":1,
+    "exceptionsRe":0
+  }
+}
