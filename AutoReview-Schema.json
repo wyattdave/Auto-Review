@@ -149,7 +149,7 @@
               "hashId": {
                 "type": "string"
               },
-              "api": {
+              "detail": {
                 "type": "string"
               },
               "type": {
@@ -193,7 +193,7 @@
               "runAfter",
               "id",
               "hashId",
-              "api",
+              "detail",
               "type",
               "exception",
               "index",
@@ -241,7 +241,7 @@
               "hashId": {
                 "type": "string"
               },
-              "api": {
+              "detail": {
                 "type": "string"
               },
               "type": {
@@ -285,7 +285,7 @@
               "runAfter",
               "id",
               "hashId",
-              "api",
+              "detail",
               "type",
               "exception",
               "index",
@@ -333,7 +333,7 @@
               "hashId": {
                 "type": "string"
               },
-              "api": {
+              "detail": {
                 "type": "string"
               },
               "type": {
@@ -377,7 +377,7 @@
               "runAfter",
               "id",
               "hashId",
-              "api",
+              "detail",
               "type",
               "exception",
               "index",
