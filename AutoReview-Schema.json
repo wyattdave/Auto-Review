@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "version":2,
     "type": "object",
     "properties": {
       "name": {
@@ -125,7 +126,13 @@
               "position": {
                 "type": "string"
               },
-              "step": {
+              "positionIndex":{
+                "type": "string"
+              },
+              "positionType":{
+                "type": "string"
+              },
+              "positionInfo":{
                 "type": "string"
               },
               "connector": {
@@ -215,6 +222,15 @@
             "type": "object",
             "properties": {
               "position": {
+                "type": "string"
+              },
+              "positionIndex":{
+                "type": "string"
+              },
+              "positionType":{
+                "type": "string"
+              },
+              "positionInfo":{
                 "type": "string"
               },
               "step": {
@@ -307,6 +323,15 @@
             "type": "object",
             "properties": {
               "position": {
+                "type": "string"
+              },
+              "positionIndex":{
+                "type": "string"
+              },
+              "positionType":{
+                "type": "string"
+              },
+              "positionInfo":{
                 "type": "string"
               },
               "step": {
