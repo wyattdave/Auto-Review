@@ -84,6 +84,7 @@ function filterActionTable(sTableID,sInputID,col) {
   let i=0;
   let sFilter = document.getElementById(sInputID).value.toUpperCase();
   let tableElem = document.getElementById(sTableID);
+
   let tr = tableElem.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
  
