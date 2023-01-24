@@ -188,9 +188,6 @@
               },
               "timeout": {
                 "type": "string"
-              },
-              "notes": {
-                "type": "string"
               }
             },
             "required": [
@@ -292,9 +289,6 @@
               },
               "timeout": {
                 "type": "string"
-              },
-              "notes": {
-                "type": "string"
               }
             },
             "required": [
@@ -395,9 +389,6 @@
                 "type": "string"
               },
               "timeout": {
-                "type": "string"
-              },
-              "notes": {
                 "type": "string"
               }
             },
@@ -533,3 +524,4 @@
       "actionObjectArray"
     ]
   }
+
