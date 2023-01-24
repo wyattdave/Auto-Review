@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>AutoReview</title>
+		<meta name="viewport" content="width=device-width">
+		<link href="assets/css/mui.min.css" rel="stylesheet" />
+		<link href="assets/css/style.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+		<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web" rel="stylesheet"	type="text/css">
+	</head>
+
+	<body>
+		<div id="container" style="padding: 10px; width:320px">
+			<div class="mui-appbar midBlue" style="padding-left:5px">
+				<table style="width:100%" >
+					<tr style="vertical-align:middle;">
+					<td class="mui--appbar-height"><h2>AutoReview</h2></td>
+					<td class="mui--appbar-height" style="text-align:right"><img src="assets/img/logo.svg" alt="Logo" style="height:50px; float:right; padding-right:20px"/></td>
+					</tr>
+				</table>
+			</div>
+			<div class="mui-panel">
+				<Label>Export Flow to Zip and then upload</Label>
+				<div class="form-group">
+					<button id="file-input-button" class="mui-btn mui-btn--primary" style="width:100%;">Select Export</button><br>
+					<input type="file" id="file-input" accept="application/zip" style="display: none;"/>
+					<p id="loading"></p>
+					<button id="review-button" class="mui-btn mui-btn--primary" style="width:100%; display:none;">Open Review</button>
+					<br>
+					<ol id="solution-container" style="display: none; border:1px; border-color:grey">
+					</ol>	
+						<Table style="width:100%; border:0px">		
+						<tr>
+							<td style="width:50%"><button id="diagram-button" class="mui-btn mui-btn--primary" style="display:none;  width:100%">Diagram</button></td>
+							<td style="width:50%"><button id="report-button" class="mui-btn mui-btn--primary" style="display:none;  width:100%">Report</button></td>
+						</tr>
+					</table>
+				</div>
+				<div class="panel-footer" style="width:100%">
+					<Table>
+						<tr>
+							<td style="width:50%;">
+
+								<span style="display:block" id="version"><img src="assets/img/mealcorp.PNG" style="height:20px"/> v2.0.2</span>
+
+								<button id="definition-button" class="mui-btn mui-btn--primary" style="display:none;  width:100%">Definition</button>
+								<div class="mui-dropdown mui-dropdown--up" id="csvDropdown" style="display:none; width:100%;">
+									<button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown" style="width:100%;"> 
+										More
+										<span class="mui-caret mui-caret--up"></span>
+									</button>
+									<ul class="mui-dropdown__menu mui-dropdown__menu--left">
+										<li id="definition-list" ><a href="#"  >Definition</a></li>
+										<li id="data-button" style="display:none;"><a href="#"  >Data</a></li>
+										<li><a href="#" id="actionsCSVdownload">Download Actions</a></li>
+										<li><a href="#" id="variablesCSVdownload">Download Variables</a></li>
+										<li><a href="#" id="connectionsCSVdownload">Download Connections</a></li>		
+									</ul>
+								</div>
+							</td>
+							<td style="width:50%;"><div class="mui-dropdown mui-dropdown--up" >
+								<button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
+									Settings
+									<span class="mui-caret mui-caret--up"></span>
+								</button>
+								<ul class="mui-dropdown__menu mui-dropdown__menu--right">
+									<li><a href="#" id="loadSaved" style="display:none;">Load Last Flow</a></li>
+									<li><a href="https://pa-autoreview.weebly.com/guide.html" rel="noopener noreferrer" target="_blank" >Guide</a></li>								
+									<li><a href="/Configs/Config.zip" download>Download Configs Templates</a></li>
+									<li><a href="#" id="restConfigs">Restore Default Configs</a></li>
+									<li><a href="#" id="bugEmail">Report Bug</a></li>
+									<li><a href="https://www.buymeacoffee.com/Wyattdave" rel="noopener noreferrer" target="_blank" >Buy Me a Coffee</a></li>
+								</ul>
+							</td>
+						</tr>
+					</Table>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="config.js"></script>	
+		<script type="text/javascript" src="assets/js/xmlToJson.js"></script>
+		<script type="text/javascript" src="assets/js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="assets/js/zip.min.js"></script>
+		<script type="text/javascript" src="assets/js/jsonToCsv.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="assets/js/mui.min.js"></script>
+		<script type="text/javascript" src="assets/js/diagram.js"></script>
+	</body>
+</html>
