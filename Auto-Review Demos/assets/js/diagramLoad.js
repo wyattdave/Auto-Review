@@ -64,9 +64,10 @@ document.querySelector('svg').onclick = function (e) {
   const sInternals='Join/Table/ParseJson/Select/Query/Compose'
   let sModal;
   let sModal2;
-  if(sName.substring(0,1)!='*'){
-    let aActions=JSON.parse(sessionStorage.getItem('actions'));
-   
+
+  if(sName.substring(0,1)!="*"){
+    let aActions=oData.actionArray;
+
     let oAction=aActions.find((item)=>
       item.name.replace(/[":\[|{}()\]]+/g, '')==sName
     )
@@ -85,14 +86,16 @@ document.querySelector('svg').onclick = function (e) {
     sModal2='<br><b>Expression: </b>'+oTrigger.triggerExpress+'<br><b>Inputs: </b>'+oTrigger.triggerInputs+'<br><b>Recurrence: </b>'+oTrigger.triggerRecur;
     document.getElementById('target-image').src='assets/img/autoreview icon 300 v2.png';
   }
-    
-    document.getElementById('target-modal').innerHTML=sModal;
-    document.getElementById('target-modal2').innerHTML=sModal2;
 
-    elmKey.style='display:none';
-    elmDetail.style='display:block';
-    elmModal.style='display:block';
-  
+
+    document.getElementById("target-modal").innerHTML=sModal;
+    document.getElementById("target-modal2").innerHTML=sModal2;
+
+    elmKey.style="display:none";
+    elmDetail.style="display:block";
+    elmModal.style="display:block";
+
+
 }
 
  function load() {
@@ -105,16 +108,18 @@ document.querySelector('svg').onclick = function (e) {
     elmName.innerHTML=sessionStorage.getItem('name');
     elmId.innerHTML=sessionStorage.getItem('id');
 
-    sSource=sessionStorage.getItem('diagram');
-    
+
+    sSource=sDiagram;
+
     //nomnoml.draw(elmCanvas, sSource);
-    const a=nomnoml.renderSvg(sSource);
-    document.getElementById('target-svgDom').innerHTML=a;
-    svgElm=document.getElementsByTagName('svg')[0]
-    svgElm.setAttribute('width', '100%');
-    svgElm.setAttribute('height','100%');
-    console.log('Powered By: https://www.nomnoml.com/',sSource);
-    
+    let a=nomnoml.renderSvg(sSource);
+    document.getElementById("target-svgDom").innerHTML=a;
+    svgElm=document.getElementsByTagName("svg")[0]
+    svgElm.setAttribute("width", "100%");
+    svgElm.setAttribute("height","100%");
+    console.log("Powered By: https://www.nomnoml.com/",sSource);
+
+
 
 }
 
