@@ -1,5 +1,6 @@
 let svgElm;
-
+let iStartWidth=0;
+let bToggle=true;
 
 const startClear = document.getElementById('load');
 startClear.addEventListener('click', function() {
@@ -7,6 +8,8 @@ startClear.addEventListener('click', function() {
   });
 startClear.click();
 
+const elmToggleZoom = document.getElementById('logo');
+const elmZoom = document.getElementById('target-zoom');
 const elmIn = document.getElementById('target-zoomIn');
 const elmOut = document.getElementById('target-zoomOut');
 const elmReset = document.getElementById('target-reset');
@@ -18,13 +21,18 @@ const elmDownloadSVG = document.getElementById('target-downloadSVG');
 const elmModal = document.getElementById('myModal');
 const elmSpan = document.getElementsByClassName('close')[0];
 
+
 elmDownloadPNG.addEventListener('click', downloadSVGAsText);
 elmDownloadSVG.addEventListener('click', downloadSVGAsText);
+elmZoom.addEventListener('input', Zoom);
 elmIn.addEventListener('click', ZoomIn);
 elmOut.addEventListener('click', ZoomOut); 
 elmReset.addEventListener('click', ZoomReset); 
 elmKeyIcon.addEventListener('click', ShowKey); 
 elmSpan.onclick = function() {elmModal.style.display = 'none';}
+elmToggleZoom.addEventListener('click', toggleZoom);
+
+
 
 window.onclick = function(event) {
   if (event.target == elmModal) { elmModal.style.display = 'none'; }
@@ -35,6 +43,37 @@ function ShowKey(){
   elmKey.style='width:100%; display:block;';
   elmModal.style='display:block';
 
+}
+
+function toggleZoom(){
+
+if(bToggle){
+  elmIn.style='position:fixed; left:150px; top:30px; font-size:20px;'
+  elmOut.style='position:fixed; left:225px; top:30px; font-size:20px;'
+  elmZoom.style='display:none';
+  iWidth=iStartWidth;
+  svgElm.setAttribute('width', iWidth+'%');
+  bToggle=false;
+}else{
+  elmZoom.style='';
+  elmReset.style='position:fixed; left:300px; top:30px; display:none;'
+  elmIn.style='position:fixed; left:150px; top:30px; font-size:20px; display:none;'
+  elmOut.style='position:fixed; left:225px; top:30px; font-size:20px; display:none'
+  iWidth=iStartWidth;
+  svgElm.setAttribute('width', iWidth+'%');
+  bToggle=true;
+}
+
+}
+
+function Zoom(){
+  let sWidth=svgElm.getAttribute('width');
+  let iWidth=parseInt(sWidth.substring(0,sWidth.length-1));
+  let iZoom=parseInt(elmZoom.value);
+  
+  iWidth=iStartWidth+(iZoom*10);
+  if(iWidth<0){iWidth=0}
+  svgElm.setAttribute('width', iWidth+'%');
 }
 
 function ZoomIn(){
@@ -117,7 +156,9 @@ document.querySelector('svg').onclick = function (e) {
     svgElm=document.getElementsByTagName('svg')[0]
     svgElm.setAttribute('width', '100%');
     svgElm.setAttribute('height','100%');
-    console.log('Powered By: https://www.nomnoml.com/',sSource);
+    let sWidth=svgElm.getAttribute('width');
+    iStartWidth=parseInt(sWidth.substring(0,sWidth.length-1));
+    console.log('Powered By: https://www.nomnoml.com/\n',sSource);
     
 
 }
