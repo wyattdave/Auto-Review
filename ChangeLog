@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Auto Review Change Log</title>
+    <style>
+      body. {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+</heaad>
+<body>
+<h2 id="change-log">Change Log</h2>
+<p><em><strong>V1.0.1</strong></em></p>
+<p><strong>New Features</strong>: </p>
+<ul>
+<li>Alpha version</li>
+</ul>
+<p><strong>Bug Fixes:</strong></p>
+<p><em><strong>V1.0.2</strong>
+</em>
+<strong>New Features:</strong></p>
+<ul>
+<li>Solution exports added, total score added</li>
+</ul>
+<p><strong>Bug Fixes:</strong> </p>
+<ul>
+<li>Error handle legacy schema exports</li>
+</ul>
+<p><em><strong>V1.0.3</strong></em></p>
+<p><strong>New Features:</strong> </p>
+<ul>
+<li>Bug report email, guide link</li>
+</ul>
+<p><strong>Bug Fixes:</strong> </p>
+<ul>
+<li>Solution export list reset</li>
+</ul>
+<p><em><strong>V1.0.4</strong></em></p>
+<p><strong>New Features:</strong> </p>
+<p><strong>Bug Fixes:</strong> </p>
+<ul>
+<li>Duplication of action names</li>
+</ul>
+<p><em><strong>V1.0.5</strong></em></p>
+<p><strong>New Features:</strong> </p>
+<ul>
+<li>Report search filters for action and api names</li>
+</ul>
+<p><strong>Bug Fixes:</strong></p>
+<p><em><strong>V1.0.6</strong></em></p>
+<p>Date: 30/11/2022
+<strong>New Features:</strong> </p>
+<p><strong>Bug Fixes:</strong> </p>
+<ul>
+<li>Missing Flow name from single flow solutions</li>
+</ul>
+<p><em><strong>V1.0.7</strong></em></p>
+<p>Date: 01/12/2022
+<strong>New Features:</strong> </p>
+<p><strong>Bug Fixes</strong>: </p>
+<ul>
+<li>CRITICAL Report load fail fix</li>
+</ul>
+<p><em><strong>V1.0.8</strong></em></p>
+<p>Date: 12/12/2022
+<strong>New Features:</strong></p>
+<ul>
+<li>Comment Sections for each table</li>
+<li>Config own scoring</li>
+<li>Edit Owner Name</li>
+</ul>
+<p><strong>Bug Fixes:</strong></p>
+<ul>
+<li>Print Formatting</li>
+</ul>
+<p><em><strong>V1.0.9</strong></em></p>
+<p>Date: 18/12/2022</p>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Addition of nesting in actions (shows what actions 
+are nested within others)</li>
+<li>Exception scope checks for Terminate and run link</li>
+<li>Filter any field in tables</li>
+<li>CSV download for actions/variables/connections</li>
+<li>Flags Premium connectors in API section with icon(<a href="https://dev.to/balagmadhu">balagmadhu</a>)</li>
+<li>Improved JSON formatting for Definition &amp; Data</li>
+<li>Schema created for Data</li>
+<li>Rebranded</li>
+<li>New Guide &amp; Support Site</li>
+</ul>
+<p><strong>Bug Fixes:</strong></p>
+<p><em><strong>V1.0.10</strong></em></p>
+<p>Date: 24/12/2022</p>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Addition of detail from steps e.g. DoUntil shows condition and timeout</li>
+<li>Connector field moved to api table</li>
+<li>Follows field (CSV only) shows proceeding step</li>
+</ul>
+<p><strong>Bug Fixes:</strong></p>
+<ul>
+<li>CSV download of &#39;Load Last Flow&#39; corrupted</li>
+<li>Sporadic incorrect Run Afters</li>
+</ul>
+<p><em><strong>V1.0.11</strong></em></p>
+<p>Date: 31/12/2022</p>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Diagram added</li>
+<li>Report added (remove scoring from review)</li>
+</ul>
+<p><em><strong>V2.0.0/1</strong></em></p>
+<p>Date: 04/01/2023</p>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Notes add from actions/steps to the review notes</li>
+</ul>
+<p><em><strong>V2.0.2</strong></em></p>
+<p>Date: 16/01/2023</p>
+<p><strong>New Features:</strong></p>
+<p><strong>Bug Fixes:</strong></p>
+<ul>
+<li>Part fiext Switch issue, now able to show internal actions (excluding if it contains container actions)</li>
+<li>Variable csv incorrect headings</li>
+</ul>
+<p><em><strong>V2.0.3</strong></em></p>
+<p>Date: 31/01/2023</p>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Shortcut keys added for Load Previous, Open Review/Report/Diagram</li>
+</ul>
+<p><strong>Bug Fixes:</strong></p>
+<ul>
+<li>Variable table not filtering</li>
+<li>Variable not coloured correctly sometimes in diagram</li>
+</ul>
+<p><em><strong>V2.0.4</strong></em></p>
+<p>Date: 20/01/2023</p>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Solution contents shown</li>
+<li>Update Diagram zoom to slider (can be switched back by clicking icon)</li>
+<li>Quick review to see list of shortcut keys</li>
+</ul>
+<p><strong>Bug Fixes:</strong></p>
+<ul>
+<li>Fixed removal of spaces from inputs/notes</li>
+<li>Fixed printing layout for Review Page</li>
+</ul>
+</body>
+</html>
