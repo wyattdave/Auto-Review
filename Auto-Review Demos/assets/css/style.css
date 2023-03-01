@@ -171,6 +171,13 @@
   cursor: pointer;
 }
 
+.slider{
+  width:90%;
+  position:fixed;
+ 
+}
+
+
 .grid-container {
   display: grid;
   grid-gap: 5px;
