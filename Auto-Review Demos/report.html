@@ -1,3 +1,524 @@
-<!DOCTYPE html>
-<!-- saved from url=(0069)index.htm#content -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.mui-textfield.mui-textfield--float-label > label {-webkit-transition:all .15s ease-out;-moz-transition:all .15s ease-out;-o-transition:all .15s ease-out;transition:all .15s ease-out;}</style><style type="text/css">@keyframes mui-btn-inserted{from{transform:none;}to{transform:none;}}.mui-btn{animation-duration:0.0001s;animation-name:mui-btn-inserted;}@keyframes mui-dropdown-inserted{from{transform:none;}to{transform:none;}}[data-mui-toggle="dropdown"]{animation-duration:0.0001s;animation-name:mui-dropdown-inserted;}@keyframes mui-btn-inserted,mui-dropdown-inserted{from{transform:none;}to{transform:none;}}.mui-btn[data-mui-toggle="dropdown"]{animation-duration:0.0001s;animation-name:mui-btn-inserted,mui-dropdown-inserted;}@keyframes mui-tab-inserted{from{transform:none;}to{transform:none;}}[data-mui-toggle="tab"]{animation-duration:0.0001s;animation-name:mui-tab-inserted;}@keyframes mui-textfield-inserted{from{transform:none;}to{transform:none;}}.mui-textfield > input{animation-duration:0.0001s;animation-name:mui-textfield-inserted;}@keyframes mui-textfield-inserted{from{transform:none;}to{transform:none;}}.mui-textfield > textarea{animation-duration:0.0001s;animation-name:mui-textfield-inserted;}@keyframes mui-select-inserted{from{transform:none;}to{transform:none;}}.mui-select > select{animation-duration:0.0001s;animation-name:mui-select-inserted;}@keyframes mui-node-inserted{from{transform:none;}to{transform:none;}}.mui-select > select ~ .mui-event-trigger{animation-duration:0.0001s;animation-name:mui-node-inserted;}@keyframes mui-node-disabled{from{transform:none;}to{transform:none;}}.mui-select > select:disabled ~ .mui-event-trigger{animation-duration:0.0001s;animation-name:mui-node-disabled;}</style>  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link href="assets/css/mui.min.css" rel="stylesheet" type="text/css"> <link href="assets/css/style.css" rel="stylesheet" type="text/css"> <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png"> <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"> <script src="mu/js/mui.min.js"></script> </head> <body> <div id="sidebar2"> <div> <a href="index.htm#content" id="restScroll"></a><img src="assets/img/logo.svg" alt="Logo" style="width:50px; padding-right:10px"> </div> <h4 class="rotateDIV"><b id="target-flowName">test}</b><br><span id="target-id">ID:0c39244c-d36a-46f8-a0e8-b90a3b61dd7c </span> </h4> </div> <div id="content2" class="mui-container-fluid"> <div class="mui-row"> <div style="padding-left: 50px; width: 90%"> <br> <br> <div> <div class="mui-panel topCardsScroll"> <div class="mui--text-black-54 mui--text-title">Trigger Details</div> <div class="mui-divider"></div> <b>Type: manual</b><br><p><b>Parameters: </b>"schema":{"type":"object","properties":{"text":{"title":"Input","type":"string","x-ms-dynamically-added":true,"description":"Please enter your input","x-ms-content-hint":"TEXT"}},"required":["text"]},"headersSchema":{"x-ms-user-name-encoded":{"title":"User name","type":"string","format":"byte","x-ms-dynamically-added":false}</p><p><b>Configuration:</b> none</p><b>Inputs:</b> none<p></p><p><b>Recurrence: </b>none</p><p><b>Expressions:</b> none</p> </div> </div> <br> <div class="mui-panel"> <div class="mui--text-black-54 mui--text-title">Variables <div style="float:right"> <input style="width:200px; padding-left:50px" class="filters" type="text" id="variablesInput" placeholder="🔍 Filter" title="Type in a name"> <select id="variablesSelect" class="filters"> <option value="0" selected="selected">Name</option> <option value="1">Type</option> <option value="2">Value</option> <option value="3">Used</option> <option value="4">Named</option> <option value="5">Constant</option> </select> </div> </div> <div class="mui-divider"></div> <br> <table class="mui-table mui-table--bordered" is="variablesTable"><thead><tr><th>Name</th><th>Type</th><th>Value</th><th>Used</th><th>Named</th><th>Constant</th></tr></thead><tbody><tr><td> test</td><td>string</td><td><div contenteditable="true" style="position: relative; overflow-y:auto; resize:both; background-color:white; z-index:1000" '=""><pre></pre></div></td><td>true</td><td>false</td><td>true</td></tr><tr><td> iNUMBER</td><td>integer</td><td><div contenteditable="true" style="position: relative; overflow-y:auto; resize:both; background-color:white; z-index:1000" '=""><pre>10</pre></div></td><td>true</td><td>true</td><td>true</td></tr></tbody></table> <p><a href="index.htm#!" class="topPadding" id="clickVariables">Show Comments</a></p> <div class="topPadding mui-textfield" style="Display:none" id="divVariables"> <textarea placeholder="Input your comments" style="width:100%" rows="4" class="mui--is-empty mui--is-untouched mui--is-pristine"></textarea> </div> </div> <br> <div class="mui-panel"> <div class="mui--text-black-54 mui--text-title">Actions <div style="float:right"> <input style="width:200px; padding-left:50px" class="filters" type="text" id="actionInput" placeholder="🔍 Filter" title="Type in a name"> <select id="actionSelect" class="filters"> <option value="0" selected="selected">Name</option> <option value="1">Type</option> <option value="2">RunAfter</option> <option value="3">Notes</option> <option value="4">Nested</option> <option value="5">Id</option> </select> </div> </div> <div class="mui-divider"></div> <br> <table class="mui-table mui-table--bordered" id="actionTable"><thead><tr><th style="max-width:24%">Name</th><th style="max-width:24%">Type</th><th style="max-width:24%">Run After</th><th style="max-width:24%">Notes</th><th>Nested</th><th>Id</th></tr></thead><tbody><tr><td id="6ddf5f66-b4eb-47ec-9885-c1371b6f0cce###1450"><a href="index.htm#6ddf5f66-b4eb-47ec-9885-c1371b6f0cce###1450-IN">Compose</a></td><td>Compose</td><td>Initialize_iNUMBER:Succeeded</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td></td><td>1</td></tr><tr><td id="e76eee77-177d-47ef-b5c2-973ba7c29615###1675"><a href="index.htm#e76eee77-177d-47ef-b5c2-973ba7c29615###1675-IN">Get_Flow</a></td><td><a href="index.htm#e76eee77-177d-47ef-b5c2-973ba7c29615###1675-API">GetFlow</a></td><td>Compose:Succeeded</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td></td><td>2</td></tr><tr><td id="ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###2266"><a href="index.htm#ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###2266-IN">Compose_2</a></td><td>Compose</td><td></td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td>4</td><td>3</td></tr><tr><td id="b171fba9-5869-4c32-a77e-a07347d33928###2242"><a href="index.htm#b171fba9-5869-4c32-a77e-a07347d33928###2242-IN">Do_until</a></td><td>Until</td><td>Get_Flow:Succeeded</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td></td><td>4</td></tr><tr><td id="ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###2755"><a href="index.htm#ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###2755-IN">Compose_3</a></td><td>Compose</td><td></td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td>6</td><td>5</td></tr><tr><td id="44e35a43-4596-46b0-a81f-a84d5c7ffc8e###2662"><a href="index.htm#44e35a43-4596-46b0-a81f-a84d5c7ffc8e###2662-IN">Switch</a></td><td>Switch</td><td>Get_Flow:Succeeded</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td></td><td>6</td></tr><tr><td id="ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###3170"><a href="index.htm#ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###3170-IN">Compose_5</a></td><td>Compose</td><td></td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td>9</td><td>7</td></tr><tr><td id="a638ceac-8e0e-42a5-9a61-aeca1d10c0f3###3416"><a href="index.htm#a638ceac-8e0e-42a5-9a61-aeca1d10c0f3###3416-IN">List_rows_present_in_a_table</a></td><td><a href="index.htm#a638ceac-8e0e-42a5-9a61-aeca1d10c0f3###3416-API">GetItems</a></td><td></td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td>9</td><td>8</td></tr><tr><td id="1d371f7f-4e8b-4b95-966a-85d4e4f997f1###3146"><a href="index.htm#1d371f7f-4e8b-4b95-966a-85d4e4f997f1###3146-IN">Condition</a></td><td>If</td><td>Scope:Succeeded</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td></td><td>9</td></tr><tr><td id="ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###4582"><a href="index.htm#ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###4582-IN">Compose_4</a></td><td>Compose</td><td></td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td>11</td><td>10</td></tr><tr><td id="02ddfed7-7277-4eca-abf3-b0e141be3b69###4484"><a href="index.htm#02ddfed7-7277-4eca-abf3-b0e141be3b69###4484-IN">Apply_to_each</a></td><td>Foreach</td><td>Do_until:Succeeded | Switch:Succeeded</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td></td><td>11</td></tr><tr><td id="ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###4935"><a href="index.htm#ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###4935-IN">Compose_6</a></td><td>Compose</td><td></td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td>14</td><td>12</td></tr><tr><td id="d450e059-0480-4200-8d41-d97527ddbadd###5129"><a href="index.htm#d450e059-0480-4200-8d41-d97527ddbadd###5129-IN">Send_an_email_notification_(V3)</a></td><td><a href="index.htm#d450e059-0480-4200-8d41-d97527ddbadd###5129-API">SendEmailV3</a></td><td>Compose_6:Succeeded</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td>14</td><td>13</td></tr><tr><td id="a44de2ff-3b2c-4418-b8b6-33678f20d812###4911"><a href="index.htm#a44de2ff-3b2c-4418-b8b6-33678f20d812###4911-IN">Scope</a></td><td>Scope</td><td>Apply_to_each:Succeeded</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td></td><td>14</td></tr><tr><td id="e8d7e5a4-4fa8-41bf-9e06-254aa20c657b###5811"><a href="index.htm#e8d7e5a4-4fa8-41bf-9e06-254aa20c657b###5811-IN">Initialize_test</a></td><td>InitializeVariable</td><td></td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td></td><td>15</td></tr><tr><td id="17358a2d-b6cb-4ea1-b2a7-efe1881a3daf###6014"><a href="index.htm#17358a2d-b6cb-4ea1-b2a7-efe1881a3daf###6014-IN">Initialize_iNUMBER</a></td><td>InitializeVariable</td><td>Initialize_test:Succeeded</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td><td></td><td>16</td></tr></tbody></table><div> <p><a href="index.htm#!" class="topPadding" id="clickActions">Show Comments</a></p> <div class="topPadding" style="Display:none" id="divActions"><textarea placeholder="Input your comments" id="actionNotes" style="width:100%" rows="4">{notes}</textarea></div> </div> <br> <div class="mui-panel"> <div class="mui--text-black-54 mui--text-title">Action Inputs <div style="float:right"> <input style="width:200px; padding-left:50px" class="filters" type="text" id="inputInput" placeholder="🔍 Filter" title="Type in a name"> <select id="inputSelect" class="filters"> <option value="0" selected="selected">Name</option> <option value="1">Type</option> <option value="2">Env</option> <option value="3">Inputs</option> </select> </div> </div> <div class="mui-divider"></div> <br> <table class="mui-table mui-table--bordered" id="inputTable"><thead><tr><th style="width:24%">Name</th><th style="width:14%">Type</th><th style="width:4%">Env</th><th>Inputs</th></tr></thead><tbody><tr><td id="6ddf5f66-b4eb-47ec-9885-c1371b6f0cce###1450-IN"><a href="index.htm#6ddf5f66-b4eb-47ec-9885-c1371b6f0cce###1450">Compose</a></td><td>Compose</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:@triggerOutputs()['headers']['x-ms-user-name-encoded']</div></td></tr><tr><td id="e76eee77-177d-47ef-b5c2-973ba7c29615###1675-IN"><a href="index.htm#e76eee77-177d-47ef-b5c2-973ba7c29615###1675">Get_Flow</a></td><td>GetFlow</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:{<br>host:{<br>apiId:/providers/Microsoft.PowerApps/apis/shared_flowmanagement,connectionName:shared_flowmanagement,operationId:GetFlow}<br>,parameters:{<br>environmentName:Default-2242945a-4ab9-4132-840e-cce1c66e31bb,flowName:a02aca65-ac64-429e-8fe6-8e6884fbe33f}<br>,authentication:{<br>value:@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey'],type:Raw}<br>}<br></div></td></tr><tr><td id="ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###2266-IN"><a href="index.htm#ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###2266">Compose_2</a></td><td>Compose</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:@variables('iNUMBER')</div></td></tr><tr><td id="b171fba9-5869-4c32-a77e-a07347d33928###2242-IN"><a href="index.htm#b171fba9-5869-4c32-a77e-a07347d33928###2242">Do_until</a></td><td>Until</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">expression:@equals(outputs('Get_Flow')?['body/name'], 'Test'),limit:{<br>count:10,timeout:PT1H}<br></div></td></tr><tr><td id="ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###2755-IN"><a href="index.htm#ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###2755">Compose_3</a></td><td>Compose</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:@outputs('Get_Flow')?['body/name']</div></td></tr><tr><td id="44e35a43-4596-46b0-a81f-a84d5c7ffc8e###2662-IN"><a href="index.htm#44e35a43-4596-46b0-a81f-a84d5c7ffc8e###2662">Switch</a></td><td>Switch</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">expression:@{<br>outputs('Get_Flow')?['body/name']}<br></div></td></tr><tr><td id="ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###3170-IN"><a href="index.htm#ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###3170">Compose_5</a></td><td>Compose</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:@outputs('Get_Flow')?['body/name']</div></td></tr><tr><td id="a638ceac-8e0e-42a5-9a61-aeca1d10c0f3###3416-IN"><a href="index.htm#a638ceac-8e0e-42a5-9a61-aeca1d10c0f3###3416">List_rows_present_in_a_table</a></td><td>GetItems</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:{<br>host:{<br>apiId:/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness,connectionName:shared_excelonlinebusiness,operationId:GetItems}<br>,parameters:{<br>source:me,drive:b!ZRVA09xUnUOCwKEiI7XMdx-ebslnsblIsT-9xi0405eV1-QxOv11S4vtZ6rj3Pwo,file:01GFTE5MWEEGPIEZOHBVHYDZXQHLEJYC3S,table:{<br>32708E17-EAAB-463D-84F3-79790403C7CD}<br>}<br>,retryPolicy:{<br>type:none}<br>,authentication:{<br>value:@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey'],type:Raw}<br>}<br></div></td></tr><tr><td id="1d371f7f-4e8b-4b95-966a-85d4e4f997f1###3146-IN"><a href="index.htm#1d371f7f-4e8b-4b95-966a-85d4e4f997f1###3146">Condition</a></td><td>If</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">expression:{<br>endsWith:[@outputs('Get_Flow')?['body/name'],test]}<br></div></td></tr><tr><td id="ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###4582-IN"><a href="index.htm#ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###4582">Compose_4</a></td><td>Compose</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:@outputs('Get_Flow')?['body/name']</div></td></tr><tr><td id="02ddfed7-7277-4eca-abf3-b0e141be3b69###4484-IN"><a href="index.htm#02ddfed7-7277-4eca-abf3-b0e141be3b69###4484">Apply_to_each</a></td><td>Foreach</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">foreach:@outputs('Get_Flow')?['body/properties/connectionReferences']</div></td></tr><tr><td id="ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###4935-IN"><a href="index.htm#ccdf2c9f-4ff6-41ac-9b19-99f78f6f66bd###4935">Compose_6</a></td><td>Compose</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:@outputs('Get_Flow')?['body/name']</div></td></tr><tr><td id="d450e059-0480-4200-8d41-d97527ddbadd###5129-IN"><a href="index.htm#d450e059-0480-4200-8d41-d97527ddbadd###5129">Send_an_email_notification_(V3)</a></td><td>SendEmailV3</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:{<br>host:{<br>apiId:/providers/Microsoft.PowerApps/apis/shared_sendmail,connectionName:shared_sendmail,operationId:SendEmailV3}<br>,parameters:{<br>request/to:test@test.com,request/subject:test,request/text:-p&gt;test body-/p&gt;}<br>,authentication:{<br>value:@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey'],type:Raw}<br>}<br></div></td></tr><tr><td id="a44de2ff-3b2c-4418-b8b6-33678f20d812###4911-IN"><a href="index.htm#a44de2ff-3b2c-4418-b8b6-33678f20d812###4911">Scope</a></td><td>Scope</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;"></div></td></tr><tr><td id="e8d7e5a4-4fa8-41bf-9e06-254aa20c657b###5811-IN"><a href="index.htm#e8d7e5a4-4fa8-41bf-9e06-254aa20c657b###5811">Initialize_test</a></td><td>InitializeVariable</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:{<br>variables:[{<br>name:test,type:string}<br>]}<br>}<br></div></td></tr><tr><td id="17358a2d-b6cb-4ea1-b2a7-efe1881a3daf###6014-IN"><a href="index.htm#17358a2d-b6cb-4ea1-b2a7-efe1881a3daf###6014">Initialize_iNUMBER</a></td><td>InitializeVariable</td><td>false</td><td><div contenteditable="true" style="max-height=100px; overflow-y:auto; resize:vertical;">inputs:{<br>variables:[{<br>name:iNUMBER,type:integer,value:10}<br>]}<br>}<br></div></td></tr></tbody></table><div> <p><a href="index.htm#!" class="topPadding" id="clickInput">Show Comments</a></p> <div class="topPadding" style="Display:none" id="divInput"><textarea id="inputNotes" placeholder="Input your comments" style="width:100%" rows="4"></textarea></div> </div> <br> <div class="mui-panel"> <div class="mui--text-black-54 mui--text-title">API Actions <div style="float:right"> <input style="width:200px; padding-left:50px" class="filters" type="text" id="apiInput" placeholder="🔍 Filter" title="Type in a name"> <select id="apiSelect" class="filters"> <option value="0" selected="selected">Name</option> <option value="1">Type</option> <option value="2">Filter</option> <option value="3">Pagination</option> <option value="4">Retry</option> </select> </div> </div> <div class="mui-divider"></div> <br> <table class="mui-table mui-table--bordered" id="apiTable"><thead><tr><th>Name</th><th>Type</th><th>Connector</th><th>Filter</th><th>Pagination</th><th>Retry</th></tr></thead><tbody><tr><td id="e76eee77-177d-47ef-b5c2-973ba7c29615###1675-API"><a href="index.htm#e76eee77-177d-47ef-b5c2-973ba7c29615###1675"> Get_Flow</a></td><td>GetFlow</td><td style="max-width:200px">shared_flowmanagement</td><td style="max-width:200px; max-height:100px; overflow-y:auto;"></td><td></td><td style="max-width:200px; max-height:100px; overflow-y:auto;"></td></tr><tr><td id="a638ceac-8e0e-42a5-9a61-aeca1d10c0f3###3416-API"><a href="index.htm#a638ceac-8e0e-42a5-9a61-aeca1d10c0f3###3416"> List_rows_present_in_a_table</a></td><td>GetItems</td><td style="max-width:200px">shared_excelonlinebusiness</td><td style="max-width:200px; max-height:100px; overflow-y:auto;"></td><td>500</td><td style="max-width:200px; max-height:100px; overflow-y:auto;">type":"none"</td></tr><tr><td id="d450e059-0480-4200-8d41-d97527ddbadd###5129-API"><a href="index.htm#d450e059-0480-4200-8d41-d97527ddbadd###5129"> Send_an_email_notification_(V3)</a></td><td>SendEmailV3</td><td style="max-width:200px">shared_sendmail</td><td style="max-width:200px; max-height:100px; overflow-y:auto;"></td><td></td><td style="max-width:200px; max-height:100px; overflow-y:auto;"></td></tr></tbody></table> <p><a href="index.htm#!" class="topPadding" id="clickApi">Show Comments</a></p> <div class="topPadding" style="Display:none" id="divApi"><textarea placeholder="Input your comments" style="width:100%" rows="4"></textarea></div> </div> <br> <div class="mui-row"> <div class="mui-col-md-6"> <div class="mui-panel"> <div class="mui--text-black-54 mui--text-title">Exceptions</div> <div class="mui-divider"></div> <table class="mui-table mui-table--bordered"><thead><tr><th>Action</th><th>Name</th><th>Runafter</th></tr></thead><tbody></tbody></table> <p><a href="index.htm#!" class="topPadding" id="clickExcept">Show Comments</a></p> <div class="topPadding" style="Display:none" id="divExcept"><textarea placeholder="Input your comments" style="width:100%" rows="4"></textarea></div> </div> </div> <div class="mui-col-md-6"> <div class="mui-panel"> <div class="mui--text-black-54 mui--text-title">Connection References</div> <div class="mui-divider"></div> <table class="mui-table mui-table--bordered"><thead><tr><th>Name</th><th>Id</th><th>Count</th></tr></thead><tbody><tr><td>shared_flowmanagement</td><td style="max-width:200px">/providers/Microsoft.PowerApps/apis/shared_flowmanagement</td><td>1</td></tr><tr><td>shared_excelonlinebusiness</td><td style="max-width:200px">/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness</td><td>1</td></tr><tr><td>shared_sendmail</td><td style="max-width:200px">/providers/Microsoft.PowerApps/apis/shared_sendmail</td><td>1</td></tr></tbody></table> <p><a href="index.htm#!" class="topPadding" id="clickConnect">Show Comments</a></p> <div class="topPadding" style="Display:none" id="divConnect"><textarea placeholder="Input your comments" style="width:100%" rows="4"></textarea></div> </div> </div> </div> </div>  <script src="assets/js/report.js"></script> </div></div></div></div></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/mui.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <script src="mu/js/mui.min.js"></script>
+  </head>
+  <body>
+    <div id="sidebar2">
+      <div>
+        <a href="#content" id="restScroll"></a>
+        <img src="assets/img/logo.svg" alt="Logo" style="width:50px; padding-right:10px">
+      </div>
+      <h4 class="rotateDIV">
+        <b id="target-flowName">test}</b>
+        <br>
+        <span id="target-id">ID:0c39244c-d36a-46f8-a0e8-b90a3b61dd7c </span>
+      </h4>
+    </div>
+    <div id="content2" class="mui-container-fluid">
+      <div class="mui-row">
+        <div style="padding-left: 50px; width: 90%">
+          <br>
+          <br>
+          <div>
+            <div class="mui-panel topCardsScroll">
+              <div class="mui--text-black-54 mui--text-title">Trigger Details</div>
+              <div class="mui-divider"></div>
+              <b>Type: manual</b>
+              <br>
+              <p>
+                <b>Parameters: </b>"schema":{"type":"object","properties":{"text":{"title":"Input","type":"string","x-ms-dynamically-added":true,"description":"Pleaseenteryourinput","x-ms-content-hint":"TEXT"}},"required":["text"]},"headersSchema":{"x-ms-user-name-encoded":{"title":"Username","type":"string","format":"byte","x-ms-dynamically-added":false}
+              </p>
+              <p>
+                <b>Configuration:</b> none
+              </p>
+              <b>Inputs:</b> none <p></p>
+              <p>
+                <b>Recurrance: </b>none
+              </p>
+              <p>
+                <b>Expressions:</b> none
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="mui-panel">
+            <div class="mui--text-black-54 mui--text-title">Variables <div style="float:right">
+                <input style="width:200px; padding-left:50px" class="filters" type="text" id="variablesInput" placeholder="🔍 Filter" title="Type in a name">
+                <select id="variablesSelect" class="filters">
+                  <option value="0" selected="selected">Name</option>
+                  <option value="1">Type</option>
+                  <option value="2">Value</option>
+                  <option value="3">Used</option>
+                  <option value="4">Named</option>
+                  <option value="5">Constant</option>
+                </select>
+              </div>
+            </div>
+            <div class="mui-divider"></div>
+            <br>
+            <table class="mui-table mui-table--bordered" id="variablesTable">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Value</th>
+                  <th>Used</th>
+                  <th>Named</th>
+                  <th>Constant</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> test</td>
+                  <td>string</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;"></div>
+                  </td>
+                  <td>true</td>
+                  <td>false</td>
+                  <td>true</td>
+                </tr>
+                <tr>
+                  <td> iNUMBER</td>
+                  <td>integer</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">10</div>
+                  </td>
+                  <td>true</td>
+                  <td>true</td>
+                  <td>true</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <a href="#!" class="topPadding" id="clickVariables">Show Comments</a>
+            </p>
+            <div class="topPadding mui-textfield" style="Display:none" id="divVariables">
+              <textarea placeholder="Input your comments" style="width:100%" rows="4"></textarea>
+            </div>
+          </div>
+          <br>
+          <div class="mui-panel">
+            <div class="mui--text-black-54 mui--text-title">Actions <div style="float:right">
+                <input style="width:200px; padding-left:50px" class="filters" type="text" id="actionInput" placeholder="🔍 Filter" title="Type in a name">
+                <select id="actionSelect" class="filters">
+                  <option value="0" selected="selected">Name</option>
+                  <option value="1">Type</option>
+                  <option value="2">RunAfter</option>
+                  <option value="3">Connector</option>
+                  <option value="4">Nested</option>
+                  <option value="5">Id</option>
+                </select>
+              </div>
+            </div>
+            <div class="mui-divider"></div>
+            <br>
+            <table class="mui-table mui-table--bordered" id="actionTable">
+              <thead>
+                <tr>
+                  <th style="max-width:24%">Name</th>
+                  <th style="max-width:24%">Type</th>
+                  <th style="max-width:24%">Run After</th>
+                  <th style="max-width:24%">Detail</th>
+                  <th>Nested</th>
+                  <th>Id</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Compose</td>
+                  <td>Compose</td>
+                  <td>Initialize_iNUMBER:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@triggerOutputs()['headers']['x-ms-user-name-encoded']</div>
+                  </td>
+                  <td></td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>Get_Flow</td>
+                  <td>GetFlow</td>
+                  <td>Compose:Succeeded</td>
+                  <td>
+
+                    <div style="max-height:100px; overflow-y:auto;">inputs:{host:{apiId:/providers/Microsoft.PowerApps/apis/shared_flowmanagement,connectionName:shared_flowmanagement,operationId:GetFlow},parameters:{environmentName:Default-9999,flowName:99999},authentication:{value:@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey'],type:Raw}}</div>
+
+                  </td>
+                  <td></td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Compose_doUntil</td>
+                  <td>Compose</td>
+                  <td></td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@variables('iNUMBER')</div>
+                  </td>
+                  <td>5</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Compose_doUntil_2</td>
+                  <td>Compose</td>
+                  <td>Compose_doUntil:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@variables('iNUMBER')</div>
+                  </td>
+                  <td>5</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>Do_until</td>
+                  <td>Until</td>
+                  <td>Get_Flow:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">expression:@equals(outputs('Get_Flow')?['body/name'],'Test'),limit:{count:10,timeout:PT1H}</div>
+                  </td>
+                  <td></td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Compose_case1</td>
+                  <td>Compose</td>
+                  <td></td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@outputs('Get_Flow')?['body/name']</div>
+                  </td>
+                  <td>9</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>Send_an_email_notification_2</td>
+                  <td>SendEmailV3</td>
+                  <td>Compose_case2:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:{host:{apiId:/providers/Microsoft.PowerApps/apis/shared_sendmail,connectionName:shared_sendmail,operationId:SendEmailV3},parameters:{request/to:test@test.com,request/subject:test,request/text: <p>testbody</p>},authentication:{value:@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey'],type:Raw}} </div>
+                  </td>
+                  <td>9</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>Send_an_email_default</td>
+                  <td>SendEmailV3</td>
+                  <td>Compose_default:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:{host:{apiId:/providers/Microsoft.PowerApps/apis/shared_sendmail,connectionName:shared_sendmail,operationId:SendEmailV3},parameters:{request/to:test@test.com,request/subject:test,request/text: <p>testbody</p>},authentication:{value:@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey'],type:Raw}} </div>
+                  </td>
+                  <td>9</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Switch</td>
+                  <td>Switch</td>
+                  <td>Get_Flow:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">expression:@{outputs('Get_Flow')?['body/name']}</div>
+                  </td>
+                  <td></td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>Compose_yes</td>
+                  <td>Compose</td>
+                  <td></td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@outputs('Get_Flow')?['body/name']</div>
+                  </td>
+                  <td>14</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>Compose_yes_2</td>
+                  <td>Compose</td>
+                  <td>Compose_yes:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@outputs('Get_Flow')?['body/name']</div>
+                  </td>
+                  <td>14</td>
+                  <td>11</td>
+                </tr>
+                <tr>
+                  <td>List_rows_present_no</td>
+                  <td>GetItems</td>
+                  <td></td>
+                  <td>
+
+                    <div style="max-height:100px; overflow-y:auto;">inputs:{host:{apiId:/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness,connectionName:shared_excelonlinebusiness,operationId:GetItems},parameters:{source:me,drive:99999,file:999999,table:{99999-EAAB-463D-84F3}},retryPolicy:{type:none},authentication:{value:@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey'],type:Raw}}</div>
+
+                  </td>
+                  <td>14</td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td>Compose_no</td>
+                  <td>Compose</td>
+                  <td>List_rows_present_no:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@outputs('Get_Flow')?['body/name']</div>
+                  </td>
+                  <td>14</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <td>Condition</td>
+                  <td>If</td>
+                  <td>Scope:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">expression:{endsWith:[@outputs('Get_Flow')?['body/name'],test]}</div>
+                  </td>
+                  <td></td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>Compose_applyToEach</td>
+                  <td>Compose</td>
+                  <td></td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@outputs('Get_Flow')?['body/name']</div>
+                  </td>
+                  <td>17</td>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <td>Compose_applyToEach_2</td>
+                  <td>Compose</td>
+                  <td>Compose_applyToEach:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@outputs('Get_Flow')?['body/name']</div>
+                  </td>
+                  <td>17</td>
+                  <td>16</td>
+                </tr>
+                <tr>
+                  <td>Apply_to_each</td>
+                  <td>Foreach</td>
+                  <td>Do_until:Succeeded | Switch:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">foreach:@outputs('Get_Flow')?['body/properties/connectionReferences']</div>
+                  </td>
+                  <td></td>
+                  <td>17</td>
+                </tr>
+                <tr>
+                  <td>Compose_Scope</td>
+                  <td>Compose</td>
+                  <td></td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@outputs('Get_Flow')?['body/name']</div>
+                  </td>
+                  <td>21</td>
+                  <td>18</td>
+                </tr>
+                <tr>
+                  <td>Send_an_email_notification_(V3)</td>
+                  <td>SendEmailV3</td>
+                  <td>Compose_Scope_2:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:{host:{apiId:/providers/Microsoft.PowerApps/apis/shared_sendmail,connectionName:shared_sendmail,operationId:SendEmailV3},parameters:{request/to:test@test.com,request/subject:test,request/text: <p>testbody</p>},authentication:{value:@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey'],type:Raw}} </div>
+                  </td>
+                  <td>21</td>
+                  <td>19</td>
+                </tr>
+                <tr>
+                  <td>Compose_Scope_2</td>
+                  <td>Compose</td>
+                  <td>Compose_Scope:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:@outputs('Get_Flow')?['body/name']</div>
+                  </td>
+                  <td>21</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>Scope</td>
+                  <td>Scope</td>
+                  <td>Apply_to_each:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;"></div>
+                  </td>
+                  <td></td>
+                  <td>21</td>
+                </tr>
+                <tr>
+                  <td>Initialize_test</td>
+                  <td>InitializeVariable</td>
+                  <td></td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:{variables:[{name:test,type:string}]}}</div>
+                  </td>
+                  <td></td>
+                  <td>22</td>
+                </tr>
+                <tr>
+                  <td>Initialize_iNUMBER</td>
+                  <td>InitializeVariable</td>
+                  <td>Initialize_test:Succeeded</td>
+                  <td>
+                    <div style="max-height:100px; overflow-y:auto;">inputs:{variables:[{name:iNUMBER,type:integer,value:10}]}}</div>
+                  </td>
+                  <td></td>
+                  <td>23</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <a href="#!" class="topPadding" id="clickActions">Show Comments</a>
+            </p>
+            <div class="topPadding" style="Display:none" id="divActions">
+              <textarea placeholder="Input your comments" id="actionNotes" style="width:100%" rows="4"></textarea>
+            </div>
+          </div>
+          <br>
+          <div class="mui-panel">
+            <div class="mui--text-black-54 mui--text-title">API Actions <div style="float:right">
+                <input style="width:200px; padding-left:50px" class="filters" type="text" id="apiInput" placeholder="🔍 Filter" title="Type in a name">
+                <select id="apiSelect" class="filters">
+                  <option value="0" selected="selected">Name</option>
+                  <option value="1">Type</option>
+                  <option value="2">Filter</option>
+                  <option value="3">Pagination</option>
+                  <option value="4">Retry</option>
+                </select>
+              </div>
+            </div>
+            <div class="mui-divider"></div>
+            <br>
+            <table class="mui-table mui-table--bordered" id="apiTable">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Connector</th>
+                  <th>Filter</th>
+                  <th>Pagination</th>
+                  <th>Retry</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> Get_Flow</td>
+                  <td>GetFlow</td>
+                  <td style="max-width:200px">shared_flowmanagement</td>
+                  <td style="max-width:200px; max-height:100px; overflow-y:auto;"></td>
+                  <td></td>
+                  <td style="max-width:200px; max-height:100px; overflow-y:auto;"></td>
+                </tr>
+                <tr>
+                  <td> Send_an_email_notification_2</td>
+                  <td>SendEmailV3</td>
+                  <td style="max-width:200px">shared_sendmail</td>
+                  <td style="max-width:200px; max-height:100px; overflow-y:auto;"></td>
+                  <td></td>
+                  <td style="max-width:200px; max-height:100px; overflow-y:auto;"></td>
+                </tr>
+                <tr>
+                  <td> Send_an_email_default</td>
+                  <td>SendEmailV3</td>
+                  <td style="max-width:200px">shared_sendmail</td>
+                  <td style="max-width:200px; max-height:100px; overflow-y:auto;"></td>
+                  <td></td>
+                  <td style="max-width:200px; max-height:100px; overflow-y:auto;"></td>
+                </tr>
+                <tr>
+                  <td> List_rows_present_no</td>
+                  <td>GetItems</td>
+                  <td style="max-width:200px">shared_excelonlinebusiness</td>
+                  <td style="max-width:200px; max-height:100px; overflow-y:auto;"></td>
+                  <td>500</td>
+                  <td style="max-width:200px; max-height:100px; overflow-y:auto;">type":"none"</td>
+                </tr>
+                <tr>
+                  <td> Send_an_email_notification_(V3)</td>
+                  <td>SendEmailV3</td>
+                  <td style="max-width:200px">shared_sendmail</td>
+                  <td style="max-width:200px; max-height:100px; overflow-y:auto;"></td>
+                  <td></td>
+                  <td style="max-width:200px; max-height:100px; overflow-y:auto;"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <a href="#!" class="topPadding" id="clickApi">Show Comments</a>
+            </p>
+            <div class="topPadding" style="Display:none" id="divApi">
+              <textarea placeholder="Input your comments" style="width:100%" rows="4"></textarea>
+            </div>
+          </div>
+          <br>
+          <div class="mui-row">
+            <div class="mui-col-md-6">
+              <div class="mui-panel">
+                <div class="mui--text-black-54 mui--text-title">Exceptions</div>
+                <div class="mui-divider"></div>
+                <table class="mui-table mui-table--bordered">
+                  <thead>
+                    <tr>
+                      <th>Action</th>
+                      <th>Name</th>
+                      <th>Runafter</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <p>
+                  <a href="#!" class="topPadding" id="clickExcept">Show Comments</a>
+                </p>
+                <div class="topPadding" style="Display:none" id="divExcept">
+                  <textarea placeholder="Input your comments" style="width:100%" rows="4"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="mui-col-md-6">
+              <div class="mui-panel">
+                <div class="mui--text-black-54 mui--text-title">Connection References</div>
+                <div class="mui-divider"></div>
+                <table class="mui-table mui-table--bordered">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Id</th>
+                      <th>Count</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>shared_flowmanagement</td>
+                      <td style="max-width:200px">/providers/Microsoft.PowerApps/apis/shared_flowmanagement</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>shared_sendmail</td>
+                      <td style="max-width:200px">/providers/Microsoft.PowerApps/apis/shared_sendmail</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>shared_excelonlinebusiness</td>
+                      <td style="max-width:200px">/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  <a href="#!" class="topPadding" id="clickConnect">Show Comments</a>
+                </p>
+                <div class="topPadding" style="Display:none" id="divConnect">
+                  <textarea placeholder="Input your comments" style="width:100%" rows="4"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="assets/js/report.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
+

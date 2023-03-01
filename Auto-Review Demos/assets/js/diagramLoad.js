@@ -1,6 +1,5 @@
 let svgElm;
-let iStartWidth=0;
-let bToggle=true;
+
 
 const startClear = document.getElementById('load');
 startClear.addEventListener('click', function() {
@@ -8,8 +7,6 @@ startClear.addEventListener('click', function() {
   });
 startClear.click();
 
-const elmToggleZoom = document.getElementById('logo');
-const elmZoom = document.getElementById('target-zoom');
 const elmIn = document.getElementById('target-zoomIn');
 const elmOut = document.getElementById('target-zoomOut');
 const elmReset = document.getElementById('target-reset');
@@ -21,18 +18,13 @@ const elmDownloadSVG = document.getElementById('target-downloadSVG');
 const elmModal = document.getElementById('myModal');
 const elmSpan = document.getElementsByClassName('close')[0];
 
-
 elmDownloadPNG.addEventListener('click', downloadSVGAsText);
 elmDownloadSVG.addEventListener('click', downloadSVGAsText);
-elmZoom.addEventListener('input', Zoom);
 elmIn.addEventListener('click', ZoomIn);
 elmOut.addEventListener('click', ZoomOut); 
 elmReset.addEventListener('click', ZoomReset); 
 elmKeyIcon.addEventListener('click', ShowKey); 
 elmSpan.onclick = function() {elmModal.style.display = 'none';}
-elmToggleZoom.addEventListener('click', toggleZoom);
-
-
 
 window.onclick = function(event) {
   if (event.target == elmModal) { elmModal.style.display = 'none'; }
@@ -43,37 +35,6 @@ function ShowKey(){
   elmKey.style='width:100%; display:block;';
   elmModal.style='display:block';
 
-}
-
-function toggleZoom(){
-
-if(bToggle){
-  elmIn.style='position:fixed; left:150px; top:30px; font-size:20px;'
-  elmOut.style='position:fixed; left:225px; top:30px; font-size:20px;'
-  elmZoom.style='display:none';
-  iWidth=iStartWidth;
-  svgElm.setAttribute('width', iWidth+'%');
-  bToggle=false;
-}else{
-  elmZoom.style='';
-  elmReset.style='position:fixed; left:300px; top:30px; display:none;'
-  elmIn.style='position:fixed; left:150px; top:30px; font-size:20px; display:none;'
-  elmOut.style='position:fixed; left:225px; top:30px; font-size:20px; display:none'
-  iWidth=iStartWidth;
-  svgElm.setAttribute('width', iWidth+'%');
-  bToggle=true;
-}
-
-}
-
-function Zoom(){
-  let sWidth=svgElm.getAttribute('width');
-  let iWidth=parseInt(sWidth.substring(0,sWidth.length-1));
-  let iZoom=parseInt(elmZoom.value);
-  
-  iWidth=iStartWidth+(iZoom*10);
-  if(iWidth<0){iWidth=0}
-  svgElm.setAttribute('width', iWidth+'%');
 }
 
 function ZoomIn(){
@@ -103,17 +64,16 @@ document.querySelector('svg').onclick = function (e) {
   const sInternals='Join/Table/ParseJson/Select/Query/Compose'
   let sModal;
   let sModal2;
-  let sModal3;
-  if(sName.substring(0,1)!='*'){
-    let aActions=JSON.parse(sessionStorage.getItem('actions'));
-   
+
+  if(sName.substring(0,1)!="*"){
+    let aActions=oData.actionArray;
+
     let oAction=aActions.find((item)=>
       item.name.replace(/[":\[|{}()\]]+/g, '')==sName
     )
 
     sModal='<b>Name:</b> '+oAction.name+'<br><b>ID:</b> '+oAction.id+'<br><b>Type:</b> '+oAction.type+'<br><b>Step: </b>'+oAction.step+'<br><b>Index:</b> '+oAction.index+'<br><b>Detail:</b> '+oAction.detail;
-    sModal2='<b>Tier: </b>'+oAction.tier+'<br><b>Filter:</b> '+oAction.filter+'<br><b>Pagination:</b> '+oAction.pagination+'<br><b>Secure: </b>'+oAction.secure+'<br><b>Retry:</b> '+oAction.retry+'<br><b>Timeout: </b>'+oAction.timeout;
-    sModal3='<b>Notes</b><br>'+oAction.notes;
+    sModal2='<b>Tier: </b>'+oAction.tier+'<br><b>Filter:</b> '+oAction.filter+'<br><b>Pagination:</b> '+oAction.pagination+'<br><b>Secure: </b>'+oAction.secure+'<br><b>Retry:</b> '+oAction.retry+'<br><b>Detail: </b>'+oAction.timeout;
     if(oAction.imgURL==null && (sInternals.includes(oAction.type) || oAction.type.includes('Variable'))){
       document.getElementById('target-image').src='assets/img/internIcon.png';
     }else  if(oAction.imgURL==null && !sInternals.includes(oAction.type)){
@@ -126,16 +86,16 @@ document.querySelector('svg').onclick = function (e) {
     sModal2='<br><b>Expression: </b>'+oTrigger.triggerExpress+'<br><b>Inputs: </b>'+oTrigger.triggerInputs+'<br><b>Recurrence: </b>'+oTrigger.triggerRecur;
     document.getElementById('target-image').src='assets/img/autoreview icon 300 v2.png';
   }
-    
-    document.getElementById('target-modal').innerHTML=sModal;
-    document.getElementById('target-modal2').innerHTML=sModal2;
-    if(sModal3.length>17){
-      document.getElementById('target-modal3').innerHTML=sModal3;
-    }
-    elmKey.style='display:none';
-    elmDetail.style='display:block';
-    elmModal.style='display:block';
-  
+
+
+    document.getElementById("target-modal").innerHTML=sModal;
+    document.getElementById("target-modal2").innerHTML=sModal2;
+
+    elmKey.style="display:none";
+    elmDetail.style="display:block";
+    elmModal.style="display:block";
+
+
 }
 
  function load() {
@@ -148,18 +108,18 @@ document.querySelector('svg').onclick = function (e) {
     elmName.innerHTML=sessionStorage.getItem('name');
     elmId.innerHTML=sessionStorage.getItem('id');
 
-    sSource=sessionStorage.getItem('diagram');
-    
+
+    sSource=sDiagram;
+
     //nomnoml.draw(elmCanvas, sSource);
-    const a=nomnoml.renderSvg(sSource);
-    document.getElementById('target-svgDom').innerHTML=a;
-    svgElm=document.getElementsByTagName('svg')[0]
-    svgElm.setAttribute('width', '100%');
-    svgElm.setAttribute('height','100%');
-    let sWidth=svgElm.getAttribute('width');
-    iStartWidth=parseInt(sWidth.substring(0,sWidth.length-1));
-    console.log('Powered By: https://www.nomnoml.com/\n',sSource);
-    
+    let a=nomnoml.renderSvg(sSource);
+    document.getElementById("target-svgDom").innerHTML=a;
+    svgElm=document.getElementsByTagName("svg")[0]
+    svgElm.setAttribute("width", "100%");
+    svgElm.setAttribute("height","100%");
+    console.log("Powered By: https://www.nomnoml.com/",sSource);
+
+
 
 }
 
