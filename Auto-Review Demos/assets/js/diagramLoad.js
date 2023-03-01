@@ -65,6 +65,7 @@ document.querySelector('svg').onclick = function (e) {
   let sModal;
   let sModal2;
 
+
   if(sName.substring(0,1)!="*"){
     let aActions=oData.actionArray;
 
@@ -87,7 +88,6 @@ document.querySelector('svg').onclick = function (e) {
     document.getElementById('target-image').src='assets/img/autoreview icon 300 v2.png';
   }
 
-
     document.getElementById("target-modal").innerHTML=sModal;
     document.getElementById("target-modal2").innerHTML=sModal2;
 
@@ -96,7 +96,6 @@ document.querySelector('svg').onclick = function (e) {
     elmModal.style="display:block";
 
 
-}
 
  function load() {
     let sSource;
@@ -118,7 +117,6 @@ document.querySelector('svg').onclick = function (e) {
     svgElm.setAttribute("width", "100%");
     svgElm.setAttribute("height","100%");
     console.log("Powered By: https://www.nomnoml.com/",sSource);
-
 
 
 }
