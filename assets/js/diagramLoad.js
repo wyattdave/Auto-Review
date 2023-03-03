@@ -135,7 +135,6 @@ document.querySelector('svg').onclick = function (e) {
   }
 
   if(sName.substring(0,1)!='*'){
-
     let oAction=aActions.find((item)=>
       item.name.replace(/[":\[|{}()\]]+/g, '')==sName
     )
@@ -144,9 +143,9 @@ document.querySelector('svg').onclick = function (e) {
     sModal2='<b>Tier: </b>'+oAction.tier+'<br><b>Filter:</b> '+oAction.filter+'<br><b>Pagination:</b> '+oAction.pagination+'<br><b>Secure: </b>'+oAction.secure+'<br><b>Retry:</b> '+oAction.retry+'<br><b>Timeout: </b>'+oAction.timeout;
     sModal3='<b>Notes</b><br>'+oAction.notes;
     if(oAction.imgURL==null && (sInternals.includes(oAction.type) || oAction.type.includes('Variable'))){
-      document.getElementById('target-image').src='assets/img/internIcon.png';
+      document.getElementById('target-image').src=sImagePath+'internIcon.png';
     }else  if(oAction.imgURL==null && !sInternals.includes(oAction.type)){
-      document.getElementById('target-image').src='assets/img/autoreview icon 300 v2.png';
+      document.getElementById('target-image').src=sImagePath+'autoreview icon 300 v2.png';
     }else{
       document.getElementById('target-image').src=oAction.imgURL;
     }
@@ -193,7 +192,6 @@ document.querySelector('svg').onclick = function (e) {
       elmModal.innerHTML=sessionStorage.getItem('actions');
    
     } else{
-
       bLocal=false;
       svgElm=document.getElementsByTagName('svg')[0];
       let sWidth=svgElm.getAttribute('width');
