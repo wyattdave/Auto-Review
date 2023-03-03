@@ -2,6 +2,7 @@ let svgElm;
 let iStartWidth=0;
 let bToggle=true;
 let aActions;
+let bLocal=true;
 
 const startClear = document.getElementById('load');
 startClear.addEventListener('click', function() {
@@ -68,22 +69,22 @@ function ShowKey(){
 
 function toggleZoom(){
 
-if(bToggle){
-  elmIn.style='position:fixed; left:150px; top:30px; font-size:20px;'
-  elmOut.style='position:fixed; left:225px; top:30px; font-size:20px;'
-  elmZoom.style='display:none';
-  iWidth=iStartWidth;
-  svgElm.setAttribute('width', iWidth+'%');
-  bToggle=false;
-}else{
-  elmZoom.style='';
-  elmReset.style='position:fixed; left:300px; top:30px; display:none;'
-  elmIn.style='position:fixed; left:150px; top:30px; font-size:20px; display:none;'
-  elmOut.style='position:fixed; left:225px; top:30px; font-size:20px; display:none'
-  iWidth=iStartWidth;
-  svgElm.setAttribute('width', iWidth+'%');
-  bToggle=true;
-}
+  if(bToggle){
+    elmIn.style='position:fixed; left:150px; top:30px; font-size:20px;'
+    elmOut.style='position:fixed; left:225px; top:30px; font-size:20px;'
+    elmZoom.style='display:none';
+    iWidth=iStartWidth;
+    svgElm.setAttribute('width', iWidth+'%');
+    bToggle=false;
+  }else{
+    elmZoom.style='';
+    elmReset.style='position:fixed; left:300px; top:30px; display:none;'
+    elmIn.style='position:fixed; left:150px; top:30px; font-size:20px; display:none;'
+    elmOut.style='position:fixed; left:225px; top:30px; font-size:20px; display:none'
+    iWidth=iStartWidth;
+    svgElm.setAttribute('width', iWidth+'%');
+    bToggle=true;
+  }
 
 }
 
@@ -125,6 +126,14 @@ document.querySelector('svg').onclick = function (e) {
   let sModal;
   let sModal2;
   let sModal3;
+  let sImagePath;
+
+  if(bLocal){
+    sImagePath="assets/img/"
+  }else{
+    sImagePath="https://wyattdave.github.io/Auto-Review/assets/img/"
+  }
+
   if(sName.substring(0,1)!='*'){
 
     let oAction=aActions.find((item)=>
@@ -185,12 +194,14 @@ document.querySelector('svg').onclick = function (e) {
    
     } else{
 
+      bLocal=false;
       svgElm=document.getElementsByTagName('svg')[0];
       let sWidth=svgElm.getAttribute('width');
       iStartWidth=parseInt(sWidth.substring(0,sWidth.length-1));
       console.log('Powered By: https://www.nomnoml.com/\n',sSource);
       aActions=JSON.parse(elmModal.innerHTML);
     }
+    
 }
 
 
