@@ -135,6 +135,7 @@ document.querySelector('svg').onclick = function (e) {
   }
 
   if(sName.substring(0,1)!='*'){
+
     let oAction=aActions.find((item)=>
       item.name.replace(/[":\[|{}()\]]+/g, '')==sName
     )
@@ -192,6 +193,7 @@ document.querySelector('svg').onclick = function (e) {
       elmModal.innerHTML=sessionStorage.getItem('actions');
    
     } else{
+
       bLocal=false;
       svgElm=document.getElementsByTagName('svg')[0];
       let sWidth=svgElm.getAttribute('width');
