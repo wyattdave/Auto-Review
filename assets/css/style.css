@@ -1,0 +1,192 @@
+/**
+#22272E RGB(34,39,46) Dark Blue
+#044288 RGB(4,66,136) Mid Blue
+#569AE5 RGB(86,154,229) Light Blue
+#f8c91c RGB(248,201,28) Yellow
+ */
+
+
+
+ html,
+ body {
+   height: 100%;
+   background-color: #22272E ;
+ }
+
+ .yellowFont{
+  color:#f8c91c;
+ }
+ 
+ html,
+ body,
+ input,
+ textarea,
+ buttons {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+ }
+ table{
+   word-break: break-all;
+ }
+ 
+
+
+ td,th {
+   overflow-wrap: break-word !important;
+   max-width: 200px;
+ }
+ 
+ .smallIcon{
+  width:16px
+ }
+ 
+ .topPadding{
+   padding-top: 10px;
+ }
+ 
+ .topCardsScroll{
+   height:300px;
+    overflow-y:auto; 
+    overflow-wrap: break-word;
+ }
+ 
+ .topCardsScroll p {
+    overflow-wrap: break-word;
+ }
+ 
+ #configRef{
+   font-size:10px; 
+   position: absolute; 
+   top: 0px;
+   margin-right: 5px;
+   right:0px;
+   color:black;
+ 
+ }
+ 
+ .filters{
+   border-style: none !important;
+  font-size: small;
+ 
+ }
+
+ Button{
+  background-color:#044288 !important;
+
+ }
+ 
+ ::placeholder{
+   color:#242627;
+ }
+ 
+ #overflowClass{
+   overflow-wrap: break-word;
+   font-size: small;
+   color:#242627;
+ }
+ .midBlue{
+  background-color:#044288 !important;
+ }
+ 
+ #sidebar2 {
+  background-color: #044288;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.rotateDIV{
+ -webkit-transform: rotate(270deg);
+ -moz-transform: rotate(270deg);
+ -o-transform: rotate(270deg);
+ -ms-transform: rotate(270deg);
+ transform: rotate(270deg) !important;
+ position: absolute;
+ bottom: 50px;
+ width:calc(100vh - 100px);
+ left: 20px;
+ background: none;
+ transform-origin: 0 0;
+ color: white;
+}
+
+ #sidebar {
+   background-color: #044288;
+   padding: 15px;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   width: 180px;
+   height: 100%;
+   padding-top: 30px;
+ }
+
+ #content2 {
+  margin-left: 90px;
+}
+ 
+ #content {
+   margin-left: 180px;
+ }
+ 
+ .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.slider{
+  width:90%;
+  position:fixed;
+ 
+}
+
+
+.grid-container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width:100%;
+  justify-content: center;
+}
+.grid-item {
+  text-align: center;
+  min-width:200px;
+
+}
