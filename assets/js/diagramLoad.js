@@ -126,6 +126,7 @@ document.querySelector('svg').onclick = function (e) {
   let sModal2;
   let sModal3;
   if(sName.substring(0,1)!='*'){
+
     let oAction=aActions.find((item)=>
       item.name.replace(/[":\[|{}()\]]+/g, '')==sName
     )
@@ -183,13 +184,13 @@ document.querySelector('svg').onclick = function (e) {
       elmModal.innerHTML=sessionStorage.getItem('actions');
    
     } else{
+
       svgElm=document.getElementsByTagName('svg')[0];
       let sWidth=svgElm.getAttribute('width');
       iStartWidth=parseInt(sWidth.substring(0,sWidth.length-1));
       console.log('Powered By: https://www.nomnoml.com/\n',sSource);
       aActions=JSON.parse(elmModal.innerHTML);
     }
-    
 }
 
 
