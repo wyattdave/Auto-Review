@@ -1,6 +1,7 @@
 let svgElm;
 let iStartWidth=0;
 let bToggle=true;
+let aActions;
 
 const startClear = document.getElementById('load');
 startClear.addEventListener('click', function() {
@@ -19,7 +20,7 @@ const elmDownloadPNG = document.getElementById('target-downloadPNG');
 const elmDownloadSVG = document.getElementById('target-downloadSVG');
 const elmModal = document.getElementById('myModal');
 const elmSpan = document.getElementsByClassName('close')[0];
-
+const downloadElem = document.getElementById("download");
 
 elmDownloadPNG.addEventListener('click', downloadSVGAsText);
 elmDownloadSVG.addEventListener('click', downloadSVGAsText);
@@ -31,7 +32,28 @@ elmKeyIcon.addEventListener('click', ShowKey);
 elmSpan.onclick = function() {elmModal.style.display = 'none';}
 document.getElementById('target-logo').addEventListener('click', toggleZoom);
 
+downloadElem.addEventListener("click", function() {
+  downloadHTML()
+});
 
+function downloadHTML(){
+
+  let sHTML=document.querySelector("html").innerHTML;
+  let sName=document.getElementById("target-flowName").innerHTML;
+  sHTML=sHTML.replaceAll('assets/','https://wyattdave.github.io/Auto-Review/assets/');
+  sHTML=sHTML.replaceAll('mu/js/mui.min.js','https://wyattdave.github.io/Auto-Review/mu/js/mui.min.js');
+  sHTML=sHTML.replaceAll('node_modules/','https://wyattdave.github.io/Auto-Review/node_modules/');
+  
+  const element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
+  encodeURIComponent(sHTML));
+  element.setAttribute('download', sName+'.html');
+  element.style.display = 'none';
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+
+}
 
 window.onclick = function(event) {
   if (event.target == elmModal) { elmModal.style.display = 'none'; }
@@ -104,7 +126,7 @@ document.querySelector('svg').onclick = function (e) {
   let sModal2;
   let sModal3;
   if(sName.substring(0,1)!='*'){
-    let aActions=JSON.parse(sessionStorage.getItem('actions'));
+    
    
     let oAction=aActions.find((item)=>
       item.name.replace(/[":\[|{}()\]]+/g, '')==sName
@@ -139,27 +161,33 @@ document.querySelector('svg').onclick = function (e) {
 
  function load() {
     let sSource;
-    const elmCanvas = document.getElementById('target-canvas');
     const elmName = document.getElementById('target-flowName');
     const elmId = document.getElementById('target-id');
-
-
-    elmName.innerHTML=sessionStorage.getItem('name');
-    elmId.innerHTML=sessionStorage.getItem('id');
+    const elmModal = document.getElementById('modalData');   
 
     sSource=sessionStorage.getItem('diagram');
     
-    //nomnoml.draw(elmCanvas, sSource);
-    const a=nomnoml.renderSvg(sSource);
-    document.getElementById('target-svgDom').innerHTML=a;
-    svgElm=document.getElementsByTagName('svg')[0]
-    svgElm.setAttribute('width', '100%');
-    svgElm.setAttribute('height','100%');
-    let sWidth=svgElm.getAttribute('width');
-    iStartWidth=parseInt(sWidth.substring(0,sWidth.length-1));
-    console.log('Powered By: https://www.nomnoml.com/\n',sSource);
-    
+    if (sSource != undefined && sSource != null){
 
+      elmName.innerHTML=sessionStorage.getItem('name');
+      elmId.innerHTML=sessionStorage.getItem('id');
+        
+      const a=nomnoml.renderSvg(sSource);
+      document.getElementById('target-svgDom').innerHTML=a;
+      svgElm=document.getElementsByTagName('svg')[0]
+      svgElm.setAttribute('width', '100%');
+      svgElm.setAttribute('height','100%');
+      let sWidth=svgElm.getAttribute('width');
+      iStartWidth=parseInt(sWidth.substring(0,sWidth.length-1));
+      console.log('Powered By: https://www.nomnoml.com/\n',sSource);
+
+      aActions=JSON.parse(sessionStorage.getItem('actions'));
+      elmModal.innerHTML=sessionStorage.getItem('actions');
+   
+    } else{
+      aActions=JSON.parse(elmModal.innerHTML);
+    }
+    
 }
 
 
