@@ -22,6 +22,7 @@ const elmModal = document.getElementById('myModal');
 const elmSpan = document.getElementsByClassName('close')[0];
 const downloadElem = document.getElementById("download");
 
+
 elmDownloadPNG.addEventListener('click', downloadSVGAsText);
 elmDownloadSVG.addEventListener('click', downloadSVGAsText);
 elmZoom.addEventListener('input', Zoom);
@@ -31,6 +32,7 @@ elmReset.addEventListener('click', ZoomReset);
 elmKeyIcon.addEventListener('click', ShowKey); 
 elmSpan.onclick = function() {elmModal.style.display = 'none';}
 document.getElementById('target-logo').addEventListener('click', toggleZoom);
+
 
 downloadElem.addEventListener("click", function() {
   downloadHTML()
@@ -126,7 +128,6 @@ document.querySelector('svg').onclick = function (e) {
   let sModal2;
   let sModal3;
   if(sName.substring(0,1)!='*'){
-    
    
     let oAction=aActions.find((item)=>
       item.name.replace(/[":\[|{}()\]]+/g, '')==sName
@@ -187,7 +188,6 @@ document.querySelector('svg').onclick = function (e) {
     } else{
       aActions=JSON.parse(elmModal.innerHTML);
     }
-    
 }
 
 
