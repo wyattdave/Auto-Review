@@ -5,8 +5,6 @@
 #f8c91c RGB(248,201,28) Yellow
  */
 
-
-
  html,
  body {
    height: 100%;
@@ -30,8 +28,6 @@
    word-break: break-all;
  }
  
-
-
  td,th {
    overflow-wrap: break-word !important;
    max-width: 200px;
@@ -108,7 +104,7 @@
  transform: rotate(270deg) !important;
  position: absolute;
  bottom: 50px;
- width:calc(100vh - 100px);
+ width:calc(100vh - 200px);
  left: 20px;
  background: none;
  transform-origin: 0 0;
