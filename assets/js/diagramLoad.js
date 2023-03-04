@@ -38,15 +38,13 @@ downloadElem.addEventListener("click", function() {
 });
 
 function downloadHTML(){
-//C:\Users\david wyatt\AutoReview\autoreview
+
   let sHTML=document.querySelector("html").innerHTML;
   let sName=document.getElementById("target-flowName").innerHTML;
   sHTML=sHTML.replaceAll('src="assets/','src="https://wyattdave.github.io/Auto-Review/assets/');
   sHTML=sHTML.replaceAll('href="assets/','href="https://wyattdave.github.io/Auto-Review/assets/');
   sHTML=sHTML.replaceAll('src="mu/js/mui.min.js','src="https://wyattdave.github.io/Auto-Review/mu/js/mui.min.js');
   sHTML=sHTML.replaceAll('src="node_modules/','src="https://wyattdave.github.io/Auto-Review/Auto-Review%20Demos/node_modules/');
-  
-
   
   const element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
@@ -181,25 +179,28 @@ document.querySelector('svg').onclick = function (e) {
 
       elmName.innerHTML=sessionStorage.getItem('name');
       elmId.innerHTML=sessionStorage.getItem('id');
+        
+      const a=nomnoml.renderSvg(sSource);
+      document.getElementById('target-svgDom').innerHTML=a;
+      svgElm=document.getElementsByTagName('svg')[0];
+      svgElm.setAttribute('width', '100%');
+      svgElm.setAttribute('height','100%');
+      let sWidth=svgElm.getAttribute('width');
+      iStartWidth=parseInt(sWidth.substring(0,sWidth.length-1));
+      console.log('Powered By: https://www.nomnoml.com/\n',sSource);
+
       aActions=JSON.parse(sessionStorage.getItem('actions'));
       elmModal.innerHTML=sessionStorage.getItem('actions');
    
     } else{
       bLocal=false;
+      svgElm=document.getElementsByTagName('svg')[0];
+      let sWidth=svgElm.getAttribute('width');
+      iStartWidth=parseInt(sWidth.substring(0,sWidth.length-1));
+      console.log('Powered By: https://www.nomnoml.com/\n',sSource);
       aActions=JSON.parse(elmModal.innerHTML);
-      sSource=document.getElementsByTagName('desc')[0].innerHTML;
-      console.log(sSource);
-
     }
-    const a=nomnoml.renderSvg(sSource);
-    document.getElementById('target-svgDom').innerHTML=a;
-    svgElm=document.getElementsByTagName('svg')[0];
-    svgElm.setAttribute('width', '100%');
-    svgElm.setAttribute('height','100%');
-    let sWidth=svgElm.getAttribute('width');
-    iStartWidth=parseInt(sWidth.substring(0,sWidth.length-1));
-    console.log('Powered By: https://www.nomnoml.com/\n',sSource);
-
+    
 }
 
 
