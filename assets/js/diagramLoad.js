@@ -188,8 +188,8 @@ document.querySelector('svg').onclick = function (e) {
       bLocal=false;
       aActions=JSON.parse(elmModal.innerHTML);
       sSource=document.getElementsByTagName('desc')[0].innerHTML;
-      
       console.log(sSource);
+
     }
     const a=nomnoml.renderSvg(sSource);
     document.getElementById('target-svgDom').innerHTML=a;
