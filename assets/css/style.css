@@ -103,12 +103,13 @@
  -ms-transform: rotate(270deg);
  transform: rotate(270deg) !important;
  position: absolute;
- bottom: 50px;
- width:calc(100vh - 200px);
+ bottom: 10px;
  left: 20px;
  background: none;
  transform-origin: 0 0;
  color: white;
+ width:50vh;  
+ font-size:1.5vh;
 }
 
  #sidebar {

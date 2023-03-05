@@ -41,6 +41,9 @@ function downloadHTML(){
 
   let sHTML=document.querySelector("html").innerHTML;
   let sName=document.getElementById("target-flowName").innerHTML;
+  sHTML='<!doctype html><html lang="en">'+sHTML+'</html>';
+  
+  sHTML=sHTML.replace('<div class="mui--text-white mui--text-body2" style="font-size:10px" id="download">Download</div>','');
   sHTML=sHTML.replaceAll('src="assets/','src="https://wyattdave.github.io/Auto-Review/assets/');
   sHTML=sHTML.replaceAll('href="assets/','href="https://wyattdave.github.io/Auto-Review/assets/');
   sHTML=sHTML.replaceAll('src="mu/js/mui.min.js','src="https://wyattdave.github.io/Auto-Review/mu/js/mui.min.js');

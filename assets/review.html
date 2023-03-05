@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AutoReview Review</title>
     <link href="assets/css/mui.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
@@ -15,10 +16,10 @@
 <body>
     <div class="mui--text-white mui--text-body3" style="color:white" id="configRef">{references}</div>
     <div id="sidebar">
-        <div><a href="#content" id="restScroll"><img src="assets/img/logo.svg" alt="Logo"
+        <div><a href="#content" id="restScroll"><img src="assets/img/logo.svg" alt="Logo" id="logo"
                     style="height:80px; padding-right:20px" /></a></div>
         <div class="mui--text-white mui--text-title yellowFont">Name</div>
-        <div class="mui--text-white mui--text-body2 overflowClass" contentEditable="true">{flowName}</div>
+        <div class="mui--text-white mui--text-body2 overflowClass" contentEditable="true" id="target-flowName" >{flowName}</div>
         <div class="mui-divider"></div>
         <div class="mui--text-white mui--text-title yellowFont">ID</div>
         <div class="mui--text-white mui--text-body2">{flowId}</div> <br>
@@ -29,6 +30,7 @@
         <div class="mui--text-white mui--text-title yellowFont">Date</div>
         <div class="mui--text-white mui--text-body2">{date}</div>
         <div class="mui-divider"></div>
+        <div class="mui--text-white mui--text-body2" style="font-size:10px" id="download">Download</div>
     </div>
     <div id="content" class="mui-container-fluid">
         <div class="mui-row">

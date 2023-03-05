@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AutoReview</title>
+    <meta name="viewport" content="width=device-width">
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <style>
+        body {
+          font-family: 'Roboto', sans-serif;
+        }
+      </style>
+</head>
+<body>
+    <h2 id="guide-to-using-config-files">Guide to Using Config Files</h2>
+    <p>AutoReview allows you to change the default scoring and rating values.</p>
+    <p>There are 4 config json files that can be update</p>
+    <ol>
+    <li>Complexity</li>
+    <li>Naming Convention</li>
+    <li>Ratings</li>
+    <li>Scoring</li>
+    </ol>
+    <p>Any combination of files can be included in the config zip to upload (e.g all if you want all changed, or just 1 if you want only 1 changed)</p>
+    <p>Every json will have a &#39;sReference&#39;, this value is shown in the report. It should be unique (ideally version controlled) as it allows readers of the report printout outs to know how the report is scored.</p>
+    <p>The json schema must not be change, if it is the import will fail.</p>
+    <p> copies of all files can be found her<a href="https://github.com/davedidisco/Auto-Review-Self-Config">https://github.com/davedidisco/Auto-Review-Self-Config</a></p>
+    <br>
+    <h2 id="1-complexity">1. Complexity</h2>
+    <p>The Complexity is a value set to give higher weights to certain connectors. As certain connectors use more api calls or require higher technical understanding to debug.</p>
+    <p><em>Negative values can be given, in default scopes are given negative values as they help make the flow more organised and easy to debug</em></p>
+    <p>There are 3 levels to the scoring </p>
+    <p>** Example</p>
+    <pre style="background-color: black; color: azure;"><code class="lang-json" > <span class="hljs-string">"type"</span>: <span class="hljs-string">"OpenApiConnection"</span>,
+        <span class="hljs-string">"inputs"</span>: {
+            <span class="hljs-string">"host"</span>: {
+            <span class="hljs-string">"apiId"</span>: <span class="hljs-string">"/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness"</span>,
+            <span class="hljs-string">"connectionName"</span>: <span class="hljs-string">"shared_excelonlinebusiness_1"</span>,
+            <span class="hljs-string">"operationId"</span>: <span class="hljs-string">"GetItems"</span>
+            },
+    </code></pre>
+    <p><em>The information above can be found in your flows definition file. AutoReview has an export definition feature so you can see your flows definition.</em></p>
+    <ol>
+    <li>Action specific</li>
+    </ol>
+    <p>If you have a particular action you want to score e.g Sharepoint get_items, then you need to set the name as &#39;operationId&#39;&amp;&#39;connectionName&#39; (this is because different connections share same operation e.g bot excel and sharepoint have GetItems opertionId).</p>
+    <p>In the example you would set the name to &#39;GetItemsshared_excelonelinebusiness&#39; (the &#39;_1&#39; should be ignored, as this is a reference to a connection reference as the example is in a solution).</p>
+    <p><em>Action specific should be the top of the array, as AutoReview will pick the first found, and if its below a Type it will return the type complexity score instead.</em></p>
+    <ol>
+    <li>Type</li>
+    </ol>
+    <p>All actions fall into a type category. The full list can be found her <a href="https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#">Power Automate Schema</a></p>
+    <p>So in the above example the name would be &#39;OpenApiConnection&#39;</p>
+    <ol>
+    <li>Default</li>
+    </ol>
+    <p>If a Action Specific value or Type cant be found a value of 1 will be given.</p>
+    <hr>
+    <br>
+    <h2 id="2-naming-convention">2. Naming Convention</h2>
+    <p>The naming convention has 2 parts, number of lead characters and the type. It enforces camelcase, so it will always go &#39;typeVariableName&#39;. The default it set to use first letter and that letter is just the first of type e.g</p>
+    <pre style="background-color: black; color: azure;"><code><span class="hljs-string">"char"</span>:<span class="hljs-number">1</span>
+    { <span class="hljs-string">"Type"</span>: <span class="hljs-string">"string"</span>, <span class="hljs-string">"Letter"</span>: <span class="hljs-string">"s"</span> },
+    </code></pre><p>= sVariableName</p>
+    <pre style="background-color: black; color: azure;"><code><span class="hljs-string">"char"</span>:<span class="hljs-number">2</span>
+    { <span class="hljs-string">"Type"</span>: <span class="hljs-string">"string"</span>, <span class="hljs-string">"Letter"</span>: <span class="hljs-string">"ss"</span> },
+    </code></pre><p>= ssVariableName</p>
+    <p>If a variable type is not found then the variable will pass, so if you don&#39;t want naming conventions you can leave the data array empty.</p>
+    <hr>
+    <br>
+    <h2 id="3-ratings">3. Ratings</h2>
+    <p>Ratings are the scoring for the top 4 cards</p>
+    <ul>
+    <li>Complexity</li>
+    <li>Actions </li>
+    <li>Variables</li>
+    <li>Exceptions</li>
+    </ul>
+    <p>For Each there isa Amber (Am) score and Red (Re) Score. So:</p>
+    <p>complexityAm = Amber Complexity score (card turns amber/orange)
+    complexityRe = Red Complexity score  (card turns red)</p>
+    <hr>
+    <br>
+    <h2 id="4-scoring">4. Scoring</h2>
+    <p>Scoring is the split for the Overall Rating . Currently the colour grading is set to 0-74 Red, 75-89 Amber, 90+ Green, at present this can not be changed.</p>
+    <p>There are a few different scoring calculations, which currently cant be changed (the values can be changed, but the calculation formula cant). Each has a description to explain, some examples are</p>
+    <p>** Basic Score</p>
+    <pre style="background-color: black; color: azure;"><code class="lang-json">{
+        <span class="hljs-attr">"Name"</span>:<span class="hljs-string">"exceptionScope"</span>,
+        <span class="hljs-attr">"Score"</span>:<span class="hljs-number">10</span>,
+        <span class="hljs-attr">"Note"</span>:<span class="hljs-string">"score added for exception scope"</span>
+    }
+    </code></pre>
+    <p>If passes exception scope test scores 10 points</p>
+    <pre style="background-color: black; color: azure;"><code class="lang-json">    {
+        <span class="hljs-attr">"Name"</span>:<span class="hljs-string">"varConstant"</span>,
+        <span class="hljs-attr">"Score"</span>:<span class="hljs-number">5</span>,
+        <span class="hljs-attr">"Note"</span>:<span class="hljs-string">"score added for naming variables with value in all capitals"</span>
+        }
+    </code></pre>
+    <p>If all variables with initialized variable name are all capitals then 5 points (e.g. sTIMESTAMP)</p>
+    <p>** Threshold Score</p>
+    <pre style="background-color: black; color: azure;"><code class="lang-json">    {
+        <span class="hljs-string">"Name"</span>:<span class="hljs-string">"variables"</span>,
+        <span class="hljs-string">"Score"</span>:<span class="hljs-number">10</span>,
+        <span class="hljs-string">"Note"</span>:<span class="hljs-string">"score given for variables before deductions"</span>
+        },
+        {
+        <span class="hljs-string">"Name"</span>:<span class="hljs-string">"variablesMin"</span>,
+        <span class="hljs-string">"Score"</span>:<span class="hljs-number">0</span>,
+        <span class="hljs-string">"Note"</span>:<span class="hljs-string">"minimum allowed variables before deductions"</span>
+        },
+        {
+        <span class="hljs-string">"Name"</span>:<span class="hljs-string">"variablesDeduction"</span>,
+        <span class="hljs-string">"Score"</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-string">"Note"</span>:<span class="hljs-string">"score added for exception scope"</span>
+        }
+    </code></pre>
+    <p>For every variable above 0 deduct 1 point from 10 (will not go below 0)</p>
+    <p>** Ratings Score</p>
+    <pre style="background-color: black; color: azure;"><code class="lang-json"> {
+        <span class="hljs-string">"Name"</span>:<span class="hljs-string">"complexityRed"</span>,
+        <span class="hljs-string">"Score"</span>:<span class="hljs-number">0</span>,
+        <span class="hljs-string">"Note"</span>:<span class="hljs-string">"score added for red scoring complexity"</span>
+    },
+    {
+        <span class="hljs-string">"Name"</span>:<span class="hljs-string">"complexityAmber"</span>,
+        <span class="hljs-string">"Score"</span>:<span class="hljs-number">15</span>,
+        <span class="hljs-string">"Note"</span>:<span class="hljs-string">"score added for amber scoring complexity"</span>
+    },
+    {
+        <span class="hljs-string">"Name"</span>:<span class="hljs-string">"complexityGreen"</span>,
+        <span class="hljs-string">"Score"</span>:<span class="hljs-number">20</span>,
+        <span class="hljs-string">"Note"</span>:<span class="hljs-string">"score added green scoring complexity"</span>
+    }
+    </code></pre>
+    <p>These are directly linked to the rating, so if complexity card was red 0 points, Amber 15 points, Green 20 points</p>
+    <p><em>There currently isn&#39;t a 100% validation so you can over score over 100 if you config it to do so</em></p>
+</body>
+</html>

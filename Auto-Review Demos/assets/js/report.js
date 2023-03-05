@@ -4,22 +4,55 @@
 const actionSelectElem = document.getElementById("actionSelect");
 const apiSelectElem = document.getElementById("apiSelect");
 const varSelectElem = document.getElementById("variablesSelect");
+const inputSelectElem = document.getElementById("inputSelect");
+const downloadElem = document.getElementById("download");
+
 
 const actionIElem = document.getElementById("actionInput");
-const apiIElem = document.getElementById("apiInput");
-const varIElem = document.getElementById("variablesInput");
+const apiElm = document.getElementById("apiInput");
+const varElem = document.getElementById("variablesInput");
+const inputElem = document.getElementById("inputInput");
+
+downloadElem.addEventListener("click", function() {
+  downloadHTML()
+});
+
+function downloadHTML(){
+
+  let sHTML=document.querySelector("html").innerHTML;
+  let sName=document.getElementById("target-flowName").innerHTML;
+  sHTML='<!doctype html><html lang="en">'+sHTML+'</html>';
+  sHTML=sHTML.replace('<div class="mui--text-white mui--text-body2" style="font-size:10px" id="download">Download</div>','');
+  sHTML=sHTML.replaceAll('assets/','https://wyattdave.github.io/Auto-Review/assets/')
+  sHTML=sHTML.replaceAll('mu/js/mui.min.js','https://wyattdave.github.io/Auto-Review/mu/js/mui.min.js')
+
+  const element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
+  encodeURIComponent(sHTML));
+  element.setAttribute('download', sName+'.html');
+  element.style.display = 'none';
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+
+}
+
 
 actionSelectElem.addEventListener("change", function() {
   actionIElem.value="";
   filterActionTable("actionTable","actionInput",-1);
 });
 apiSelectElem.addEventListener("change", function() {
-  apiIElem="";
+  apiElm.value="";
   filterActionTable("apiTable","apiInput",-1);
 });
 varSelectElem.addEventListener("change", function() {
-  varIElem="";
+  varElem.value="";
   filterActionTable("variablesTable","variablesInput",-1);
+});
+inputSelectElem.addEventListener("change", function() {
+  inputElem.value="";
+  filterActionTable("inputTable","inputInput",-1);
 });
 
 
@@ -27,13 +60,18 @@ actionIElem.addEventListener("change", function() {
   filterActionTable("actionTable","actionInput",actionSelectElem.value);
 });
 
-apiIElem.addEventListener("change", function() {
+apiElm.addEventListener("change", function() {
   filterActionTable("apiTable","apiInput",apiSelectElem.value);
 });
 
-varIElem.addEventListener("change", function() {
+varElem.addEventListener("change", function() {
   filterActionTable("variablesTable","variablesInput",varSelectElem.value);
 });
+
+inputElem.addEventListener("change", function() {
+  filterActionTable("inputTable","inputInput",inputSelectElem.value);
+});
+
 
 
 
@@ -57,6 +95,14 @@ apiElem.addEventListener("click", function(e) {
   e.stopPropagation();
   showComments("divApi");
 });
+
+const inpElem = document.getElementById("clickInput");
+inpElem.addEventListener("click", function(e) {
+  e.stopPropagation();
+  console.log(11)
+  showComments("divInput");
+});
+
 
 const exceptElem = document.getElementById("clickExcept");
 exceptElem.addEventListener("click", function(e) {
