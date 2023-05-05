@@ -13,31 +13,6 @@ const apiElm = document.getElementById("apiInput");
 const varElem = document.getElementById("variablesInput");
 const inputElem = document.getElementById("inputInput");
 
-downloadElem.addEventListener("click", function() {
-  downloadHTML()
-});
-
-function downloadHTML(){
-
-  let sHTML=document.querySelector("html").innerHTML;
-  let sName=document.getElementById("target-flowName").innerHTML;
-  sHTML='<!doctype html><html lang="en">'+sHTML+'</html>';
-  sHTML=sHTML.replace('<div class="mui--text-white mui--text-body2" style="font-size:10px" id="download">Download</div>','');
-  sHTML=sHTML.replaceAll('assets/','https://wyattdave.github.io/Auto-Review/assets/')
-  sHTML=sHTML.replaceAll('mu/js/mui.min.js','https://wyattdave.github.io/Auto-Review/mu/js/mui.min.js')
-
-  const element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
-  encodeURIComponent(sHTML));
-  element.setAttribute('download', sName+'.html');
-  element.style.display = 'none';
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
-
-}
-
-
 actionSelectElem.addEventListener("change", function() {
   actionIElem.value="";
   filterActionTable("actionTable","actionInput",-1);
