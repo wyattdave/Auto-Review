@@ -3,6 +3,7 @@ let sSearchTerm;
 let elmContent;
 let sPreviousSearch="";
 let sScreen="app";
+console.log("report loaded");
 
 const elmCodeSearch = document.getElementById('target-search');
 const elmContainSearch = document.getElementById('container-search');
@@ -413,4 +414,3 @@ function filterTable(sTable,sColumn, sValue,sLogic) {
   }else{
     alert("Invalid Filter\rField not found\rPlease note fields are case sensitive");
   }
-}
