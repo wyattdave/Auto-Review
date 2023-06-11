@@ -1,4 +1,4 @@
-
+console.log("Report Loaded");
 let sSearchTerm;
 let elmContent;
 let sPreviousSearch="";
@@ -414,3 +414,4 @@ function filterTable(sTable,sColumn, sValue,sLogic) {
   }else{
     alert("Invalid Filter\rField not found\rPlease note fields are case sensitive");
   }
+}
