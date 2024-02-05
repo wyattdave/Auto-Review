@@ -1,9 +1,8 @@
-console.log("Report Loaded");
+
 let sSearchTerm;
 let elmContent;
 let sPreviousSearch="";
 let sScreen="app";
-console.log("report loaded");
 
 const elmCodeSearch = document.getElementById('target-search');
 const elmContainSearch = document.getElementById('container-search');

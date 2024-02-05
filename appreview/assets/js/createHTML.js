@@ -14,6 +14,8 @@ function generateCodeReport() {
     let sFormulas="";
     let iComponentCount=0;
     let sOnstartScript="";
+   
+console.log(appData)
     if(appData.OnStart){
       sCodeJson+='<span class="lightGrey-width"><b>Application - Start</b></span><br>OnStart<br><br>'+appData.OnStart.InvariantScript.replaceAll('\n','<br>').replaceAll(' ','&nbsp;')+"<br><br>"
       sOnstartScript=appData.OnStart.InvariantScript
@@ -24,6 +26,7 @@ function generateCodeReport() {
     let aLocalVarBySceen=[];
     aComponents.forEach(parent=>{
       parent.Rules.forEach(item=>{
+        let sScript=item.InvariantScript.replace(RegExHtml,'');
         sTable+='<tr><td>'+
         parent.Screen
         +'</td><td>'+
@@ -33,14 +36,15 @@ function generateCodeReport() {
         +'</td><td>'+
         item.Property
         +'</td><td>'+
-        item.InvariantScript
+        sScript
         +'</td></tr>';
   
-        if(item.Property.substring(0,2)=="On"){  
-          sCodeJson+='<span class="lightGrey-width"><b>'+parent.Name+" - "+parent.StyleName+" / Screen:"+parent.Screen+"</b></span><br>"+item.Property+"<br><br>"+item.InvariantScript.replaceAll('\r\n','<br>').replaceAll(' ','&nbsp;')+"<br><br>"
+        // if(item.Property.substring(0,2)=="On"){  
+        if(sScript.substring(0,3)!="RGB" && sScript.length>4){  
+          sCodeJson+='<span class="lightGrey-width"><b>'+parent.Name+" - "+parent.StyleName+" / Screen:"+parent.Screen+"</b></span><br><b>"+item.Property+"</b><br>"+sScript.replaceAll('\r\n','<br>').replaceAll(' ','&nbsp;')+"<br><br>"
         }
         ///array for local variables to know screen
-        aLocalVarBySceen.push({screen:parent.Screen,code:item.InvariantScript});
+        aLocalVarBySceen.push({screen:parent.Screen,code:sScript});
         
       })
     })
@@ -129,8 +133,13 @@ function generateCodeReport() {
     "</td><td>"+iCount+
     "<td></tr>";
    
-    let RegExCon=new RegExp(`\\'${item.Name}(.*?)\\(`, "gm");
+    let RegExCon=new RegExp(`\\'${item.Name}(.*?)\\(`, "gm");  
     let aConDetails=sCodeJson.match(RegExCon);
+    if(!aConDetails){
+      RegExCon=new RegExp(`\\${item.Name}(.*?)\\(`, "gm");
+      aConDetails=sCodeJson.match(RegExCon);
+    }
+
     if(aConDetails){
       aConDetails.forEach(child=>{
         aConnectionDetail.push({
@@ -244,26 +253,29 @@ function generateCodeReport() {
   sTables+="</table></div>"
 
 
+  ////Test
+  let sTests='<div class="table-responsive"><table class="table table-bordered" id="table-suites" width="100%" cellspacing="0"><tr><th>Suite Trigger</th><th>Action</th></tr>'
 
+  if(oTests !=undefined){
+    oTests.Suites.forEach(item => {
+      sTests+="<tr><td>"+item.Property+
+      "</td><td>"+item.InvariantScript+
+      "</td></tr>";
+    })
+  }
+  sTests+="</table></div><br><br>";
+  sTests+='<div class="table-responsive"><table class="table table-bordered" id="table-tests" width="100%" cellspacing="0"><tr><th>Suite</th><th>Test</td><th>Description</th><th>Action</th></tr>'
 
-////Test
-let sTests='<div class="table-responsive"><table class="table table-bordered" id="table-suites" width="100%" cellspacing="0"><tr><th>Suite Trigger</th><th>Action</th></tr>'
-oTests.Suites.forEach(item => {
-  sTests+="<tr><td>"+item.Property+
-  "</td><td>"+item.InvariantScript+
-  "</td></tr>";
-})
-sTests+="</table></div><br><br>";
-sTests+='<div class="table-responsive"><table class="table table-bordered" id="table-tests" width="100%" cellspacing="0"><tr><th>Suite</th><th>Test</td><th>Description</th><th>Action</th></tr>'
-
-oTests.Tests.forEach(item => {
-  sTests+="<tr><td>"+item.Suite+
-  "</td><td>"+item.Test+
-  "</td><td>"+item.TestDescription+
-  "</td><td>"+item.Action+
-  "</td></tr>";
-})
-sTests+="</table></div>";
+  if(oTests !=undefined){
+    oTests.Tests.forEach(item => {
+      sTests+="<tr><td>"+item.Suite+
+      "</td><td>"+item.Test+
+      "</td><td>"+item.TestDescription+
+      "</td><td>"+item.Action+
+      "</td></tr>";
+    })
+  }
+  sTests+="</table></div>";
 
   
   ////missing dependencies
@@ -276,8 +288,8 @@ sTests+="</table></div>";
   });
   sMissingDependencies+="</table></div>";
   
-
-  const sCheckerTemplate=' <div class="text-xs font-weight-bold text-uppercase mb-1" >{top}</div><div class="h5 mb-0 font-weight-bold text-gray-800">{bottom}</div><br>'
+  ////Checker
+  const sCheckerTemplate=' <div class="text-xs font-weight-bold text-uppercase mb-1" >{top}</div><div class="text-xs font-weight-bold text-gray-800">{bottom}</div><br>'
 
   let sChecker="";
   aChecker.forEach(item =>{
@@ -286,18 +298,35 @@ sTests+="</table></div>";
     sChecker=sChecker+sCheck.replace('{top}',item.Why)
   })
 
-  ////Checker
-///  let sChecker='<div class="table-responsive"><table class="table table-bordered" id="table-checker" width="100%" cellspacing="0"><tr><th>Name</th><th>Level</th><th>Type</th><th>Category</th><th>How</th><th>Why</th><th>Required</th></tr>';
-///    aChecker.forEach(item =>{
-///        sChecker+="<tr><td>"+item.Name+"</td>"+
-///        "<td>"+item.Level+"</td>"+
-///        "<td>"+item.Type+"</td>"+
-///        "<td>"+item.Category+"</td>"+
-///        "<td>"+item.How+"</td>"+
-///        "<td>"+item.Why+"</td></tr>";
-///    });
-///    sChecker+="</table></div>";
 
+  ////Diagram
+  let aDiagram=[];
+  let sStart="#fillArrows: true\n#lineWidth: 2\n#fill:white\n#ranker: tight-tree\n#direction: right\n#fill:#f8f9fc\n"
+  aScreens.forEach(item =>{
+    let aNavScreens=[];
+    if(item.Links){
+      item.Links.forEach(nav =>{
+        let aExpress=nav.split(",");
+        if(aExpress.length==1){
+          aExpress=aExpress[0].split(")");
+        }
+        let sLink=aExpress[0].replace("Navigate(","").replaceAll("'","");
+        aNavScreens.push(sLink);
+        sStart+="["+item.Screen+"]->["+sLink+"]\n";
+      })
+    }
+    const iComponentCount=aComponents.filter(comp =>{
+      return comp.Screen==item.Screen
+    }).length;
+    aDiagram.push({
+      'Screen':item.Screen,
+      'CountComponents': iComponentCount,
+      'Links':aNavScreens
+    })
+   item.CountComponents=iComponentCount
+   sStart+="["+item.Screen+"| Component Count:"+iComponentCount+"]\n";
+  })
+    
   ////App Config
   let sComponentTotalsTable='<div class="table-responsive"><table class="table table-bordered" id="table-componentTotals" width="100%" cellspacing="0"><tr><th>Component</th><th>Count_Set</th></tr>';
   aComponentTotals.forEach(item =>{
@@ -354,9 +383,6 @@ sTests+="</table></div>";
     iFilter= sCodeJson.match(/Filter\(Filter\(/g).length
   }
 
-
-
-  
   const oFlags={
     "isSolution":fSolution,
     "missingDependencies":aMissingDependencies.length>0,
@@ -371,16 +397,14 @@ sTests+="</table></div>";
     "checker":sChecker,
     "delegation":""
   }
-  
-  
-  
+    
     ////create report
   
     const oReport={
       "app":sAppConfig,
+      "formula":sFormulas,
       "codeBlock":sCodeJson,
       "components":sTable,
-      "formula":sFormulas,
       "global":sTableVarGl,
       "local":sTableVarLo,
       "collections":sCollections,
@@ -393,17 +417,16 @@ sTests+="</table></div>";
       "missingDependencies":sMissingDependencies,
       "tables":sTables,
       "flows":sFlows,
-      "diagram":"Coming Soon",
+      "diagram":sStart,
       "flags":oFlags,
       "counts":{
         "global":aGlobalVarAll.length,
         "local":"In Build","components":iComponentCount
       }
     }
-  
-    sessionStorage.setItem('report',JSON.stringify(oReport));
-   
-   window.open("assets/codeReview.html");
+
+    localStorage.setItem('report',LZString.compress(JSON.stringify(oReport)));
+     window.open("codeReview.html");
   }
 
 

@@ -3,7 +3,8 @@
 #D871BD RGB(216,113,189) Mid
 #E592C8 RGB(229,146,200) Light 
  */
-
+ a,a:hover,p { color: rgb(86, 84, 84); }
+ 
 .darkbg{
   background-color: #902D87 !important;
 }
