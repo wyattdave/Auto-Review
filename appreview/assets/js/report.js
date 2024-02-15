@@ -305,7 +305,7 @@ if(elmCheckPop){elmCheckPop.remove()}
           iNext=elements.length-1
         }
         elements[iNext].setAttribute("class", "hightlighted");
-        count.innerHTML = "Found " + elements.length + " occurrences. Selected "+index+1;
+        count.innerHTML = "Found " + elements.length + " occurrences. Selected "+(index+1);
     });
     popup.appendChild(nextBtn);
 
@@ -322,7 +322,7 @@ if(elmCheckPop){elmCheckPop.remove()}
           iNext=0
         }
         elements[iNext].setAttribute("class", "hightlighted");
-        count.innerHTML = "Found " + elements.length + " occurrences. Selected "+index+1;
+        count.innerHTML = "Found " + elements.length + " occurrences. Selected "+(index+1);
     });
     popup.appendChild(prevBtn);
 
