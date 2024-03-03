@@ -188,6 +188,15 @@
               },
               "timeout": {
                 "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              },
+               "parent" : {
+                "type": "string"
+              },
+              "branch" : {
+                "type": "string"
               }
             },
             "required": [
@@ -210,7 +219,9 @@
               "pagination",
               "secure",
               "retry",
-              "timeout"
+              "timeout",
+              "parent",
+              "branch"
             ]
           }
         ]
@@ -288,6 +299,9 @@
                 "type": "string"
               },
               "timeout": {
+                "type": "string"
+              },
+              "notes": {
                 "type": "string"
               }
             },
@@ -389,6 +403,9 @@
                 "type": "string"
               },
               "timeout": {
+                "type": "string"
+              },
+              "notes": {
                 "type": "string"
               }
             },
@@ -524,4 +541,3 @@
       "actionObjectArray"
     ]
   }
-

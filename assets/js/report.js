@@ -6,8 +6,6 @@ const apiSelectElem = document.getElementById("apiSelect");
 const varSelectElem = document.getElementById("variablesSelect");
 const inputSelectElem = document.getElementById("inputSelect");
 const downloadElem = document.getElementById("download");
-
-
 const actionIElem = document.getElementById("actionInput");
 const apiElm = document.getElementById("apiInput");
 const varElem = document.getElementById("variablesInput");
@@ -17,7 +15,13 @@ downloadElem.addEventListener("click", function() {
   downloadHTML()
 });
 
+
+downloadElem.addEventListener("click", function() {
+  downloadHTML()
+});
+
 function downloadHTML(){
+
 
   let sHTML=document.querySelector("html").innerHTML;
   let sName=document.getElementById("target-flowName").innerHTML;
@@ -35,8 +39,8 @@ function downloadHTML(){
   element.click();
   document.body.removeChild(element);
 
-}
 
+}
 
 actionSelectElem.addEventListener("change", function() {
   actionIElem.value="";
@@ -72,10 +76,12 @@ inputElem.addEventListener("change", function() {
   filterActionTable("inputTable","inputInput",inputSelectElem.value);
 });
 
-
-
-
 const startClear = document.getElementById("restScroll");
+startClear.addEventListener("click", function(e) {
+  e.stopPropagation();
+  topFunction()
+});
+
 startClear.click();
 
 const variablesElem = document.getElementById("clickVariables");
@@ -102,7 +108,6 @@ inpElem.addEventListener("click", function(e) {
   console.log(11)
   showComments("divInput");
 });
-
 
 const exceptElem = document.getElementById("clickExcept");
 exceptElem.addEventListener("click", function(e) {
@@ -147,4 +152,9 @@ function filterActionTable(sTableID,sInputID,col) {
       }   
     }    
   }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
 }

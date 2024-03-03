@@ -1,0 +1,33 @@
+/**
+#902D87 RGB(144,45,135) Dark
+#D871BD RGB(216,113,189) Mid
+#E592C8 RGB(229,146,200) Light 
+ */
+ a,a:hover,p { color: rgb(86, 84, 84); }
+ 
+.darkbg{
+  background-color: #902D87 !important;
+}
+
+.midbg{
+  background-color: #D871BD;
+}
+
+.lightbg{
+  background-color: #E592C8;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.selected {
+  background-color: lightskyblue;
+}
+
+.lightGrey-width{
+  display: block;
+  width:100%;
+  color:white;
+  background-color: lightslategray;
+}

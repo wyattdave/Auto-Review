@@ -33,9 +33,9 @@ elmKeyIcon.addEventListener('click', ShowKey);
 elmSpan.onclick = function() {elmModal.style.display = 'none';}
 document.getElementById('target-logo').addEventListener('click', toggleZoom);
 
-downloadElem.addEventListener("click", function() {
-  downloadHTML()
-});
+//downloadElem.addEventListener("click", function() {
+//  downloadHTML()
+//});
 
 function downloadHTML(){
 
