@@ -1,0 +1,543 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "version":2,
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "boolean"
+      },
+      "id": {
+        "type": "string"
+      },
+      "environment": {
+        "type": "string"
+      },
+      "owner": {
+        "type": "string"
+      },
+      "trigger": {
+        "type": "string"
+      },
+      "triggerParam": {
+        "type": "string"
+      },
+      "triggerConfig": {
+        "type": "string"
+      },
+      "triggerExpress": {
+        "type": "string"
+      },
+      "triggerInputs": {
+        "type": "string"
+      },
+      "triggerRecur": {
+        "type": "string"
+      },
+      "premium": {
+        "type": "boolean"
+      },
+      "connectionRefs": {
+        "type": "integer"
+      },
+      "connectors": {
+        "type": "integer"
+      },
+      "steps": {
+        "type": "integer"
+      },
+      "variables": {
+        "type": "integer"
+      },
+      "complexity": {
+        "type": "integer"
+      },
+      "varNaming": {
+        "type": "boolean"
+      },
+      "varNameConsts": {
+        "type": "boolean"
+      },
+      "varNameUse": {
+        "type": "boolean"
+      },
+      "composes": {
+        "type": "integer"
+      },
+      "exception": {
+        "type": "integer"
+      },
+      "exceptionHandleScope": {
+        "type": "boolean"
+      },
+      "exceptionScope": {
+        "type": "boolean"
+      },
+      "exceptionTerminate": {
+        "type": "boolean"
+      },
+      "exceptionLink": {
+        "type": "boolean"
+      },
+      "mainScope": {
+        "type": "boolean"
+      },
+      "variableArray": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "used": {
+                "type": "boolean"
+              },
+              "named": {
+                "type": "boolean"
+              },
+              "local": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "name",
+              "type",
+              "value",
+              "used",
+              "named",
+              "local"
+            ]
+          }
+        ]
+      },
+      "actionArray": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "position": {
+                "type": "string"
+              },
+              "positionIndex":{
+                "type": "string"
+              },
+              "positionType":{
+                "type": "string"
+              },
+              "positionInfo":{
+                "type": "string"
+              },
+              "connector": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "tier":{
+                "type": "string"
+              },
+              "imgURL":{
+                "type": "string"
+              },
+              "runAfter": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "hashId": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "exception": {
+                "type": "string"
+              },
+              "index": {
+                "type": "integer"
+              },
+              "nested": {
+                "type": "string"
+              },
+              "complexity": {
+                "type": "integer"
+              },
+              "filter": {
+                "type": "string"
+              },
+              "pagination": {
+                "type": "string"
+              },
+              "secure": {
+                "type": "string"
+              },
+              "retry": {
+                "type": "string"
+              },
+              "timeout": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              },
+               "parent" : {
+                "type": "string"
+              },
+              "branch" : {
+                "type": "string"
+              }
+            },
+            "required": [
+              "position",
+              "step",
+              "connector",
+              "name",
+              "tier",
+              "imgURL",
+              "runAfter",
+              "id",
+              "hashId",
+              "detail",
+              "type",
+              "exception",
+              "index",
+              "nested",
+              "complexity",
+              "filter",
+              "pagination",
+              "secure",
+              "retry",
+              "timeout",
+              "parent",
+              "branch"
+            ]
+          }
+        ]
+      },
+      "apiActionArray": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "position": {
+                "type": "string"
+              },
+              "positionIndex":{
+                "type": "string"
+              },
+              "positionType":{
+                "type": "string"
+              },
+              "positionInfo":{
+                "type": "string"
+              },
+              "step": {
+                "type": "string"
+              },
+              "connector": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "tier":{
+                "type": "string"
+              },
+              "imgURL":{
+                "type":"string"
+              },
+              "runAfter": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "hashId": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "exception": {
+                "type": "string"
+              },
+              "index": {
+                "type": "integer"
+              },
+              "nested": {
+                "type": "string"
+              },
+              "complexity": {
+                "type": "integer"
+              },
+              "filter": {
+                "type": "string"
+              },
+              "pagination": {
+                "type": "string"
+              },
+              "secure": {
+                "type": "string"
+              },
+              "retry": {
+                "type": "string"
+              },
+              "timeout": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "position",
+              "step",
+              "connector",
+              "name",
+              "tier",
+              "imgURL",
+              "runAfter",
+              "id",
+              "hashId",
+              "detail",
+              "type",
+              "exception",
+              "index",
+              "nested",
+              "complexity",
+              "filter",
+              "pagination",
+              "secure",
+              "retry",
+              "timeout"
+            ]
+          }
+        ]
+      },
+      "exceptionArray": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "position": {
+                "type": "string"
+              },
+              "positionIndex":{
+                "type": "string"
+              },
+              "positionType":{
+                "type": "string"
+              },
+              "positionInfo":{
+                "type": "string"
+              },
+              "step": {
+                "type": "string"
+              },
+              "connector": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "tier":{
+                "type": "string"
+              },
+              "imgURL":{
+                "type":"string"
+              },
+              "runAfter": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "hashId": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "exception": {
+                "type": "string"
+              },
+              "index": {
+                "type": "integer"
+              },
+              "nested": {
+                "type": "string"
+              },
+              "complexity": {
+                "type": "integer"
+              },
+              "filter": {
+                "type": "string"
+              },
+              "pagination": {
+                "type": "string"
+              },
+              "secure": {
+                "type": "string"
+              },
+              "retry": {
+                "type": "string"
+              },
+              "timeout": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "position",
+              "step",
+              "connector",
+              "name",
+              "tier",
+              "imgURL",
+              "runAfter",
+              "id",
+              "hashId",
+              "detail",
+              "type",
+              "exception",
+              "index",
+              "nested",
+              "complexity",
+              "filter",
+              "pagination",
+              "secure",
+              "retry",
+              "timeout"
+            ]
+          }
+        ]
+      },
+      "connectionArray": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "appId": {
+                "type": "string"
+              },
+              "conName": {
+                "type": "string"
+              },
+              "count": {
+                "type": "integer"
+              },
+              "opId": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "appId",
+              "conName",
+              "count",
+              "opId"
+            ]
+          }
+        ]
+      },
+      "error": {
+        "type": "string"
+      },
+      "actionObjectArray": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "step": {
+                "type": "string"
+              },
+              "connector": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "hashId": {
+                "type": "string"
+              },
+              "object": {
+                "type": "string"
+              },
+              "index": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "step",
+              "connector",
+              "name",
+              "id",
+              "hashId",
+              "object",
+              "index"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "name",
+      "id",
+      "environment",
+      "owner",
+      "trigger",
+      "triggerParam",
+      "triggerConfig",
+      "triggerExpress",
+      "triggerInputs",
+      "triggerRecur",
+      "connectionRefs",
+      "connectors",
+      "steps",
+      "variables",
+      "complexity",
+      "varNaming",
+      "varNameConsts",
+      "varNameUse",
+      "composes",
+      "exception",
+      "exceptionHandleScope",
+      "exceptionScope",
+      "exceptionTerminate",
+      "exceptionLink",
+      "mainScope",
+      "variableArray",
+      "actionArray",
+      "apiActionArray",
+      "exceptionArray",
+      "connectionArray",
+      "error",
+      "actionObjectArray"
+    ]
+  }

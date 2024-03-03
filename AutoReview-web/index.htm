@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>AutoReview</title>
+		<meta name="viewport" content="width=device-width">
+		<link href="assets/css/mui.min-ar.css" rel="stylesheet" />
+		<link href="assets/fontawsome/css/fontawesome.css" rel="stylesheet" />
+		<link href="assets/fontawsome/css/solid.min.css" rel="stylesheet" />
+		<link href="assets/css/style-ar.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+		<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web" rel="stylesheet"	type="text/css">
+	</head>
+	<body>		
+			<div class="mui-appbar midBlue" id ="header" style="padding-left:5px">
+				<table style="width:100%" >
+					<tr style="vertical-align:middle;">
+					<td class="mui--appbar-height"><h2>AutoReview</h2></td>
+					<td class="mui--appbar-height" style="text-align:right"><img src="assets/img/logo.svg" alt="Logo" style="height:50px; float:right; padding-right:20px"/></td>
+					</tr>
+				</table>
+			</div>
+			<div class="mui-panel center" style="width: 320px;height:auto; padding-left:20px; padding-right:20px;">				
+				<div class="form-group">
+					<a href="#" id="file-input-button"style="width:100%;"><i class="fa-solid fa-file-import" style="color: #585858;"></i> Select Export</a><br>
+					<a href="#" id="loadSaved" style="display:none;"><i class="fa-solid fa-retweet" style="color: #585858;"></i> Load Last Flow</a>
+					<a href="#" id="loadLive" style="display:none;"><i class="fa-solid fa-desktop" style="color: #585858;"></i> Load Current Flow</a>
+					<div id="admin">
+						<div class="mui-divider"></div>
+						<a href="https://pa-autoreview.weebly.com/guide.html" rel="noopener noreferrer" target="_blank" ><i class="fa-solid fa-circle-info" style="color: #585858;"></i> Guide</a>	<br>				
+						
+						<div class="mui-divider"></div>
+
+						<a href="https://www.buymeacoffee.com/Wyattdave" rel="noopener noreferrer" target="_blank" ><i class="fa-solid fa-mug-hot" style="color: #585858;"></i> Buy Me a Coffee</a>
+					</div>
+					<br>
+					<input type="file" id="file-input" accept="application/zip" style="display: none;"/>
+					<div class="mui-divider"></div>
+					<div id="solution-title" style="display: none;"><i class="fa-solid fa-box-archive"></i>Solution Contents</div>
+					<ol id="solution-container" style="display: none;"></ol>
+					<span style="display:block" id="version"><img src="assets/img/mealcorp.PNG" style="height:20px"/> v2.3.9</span>	
+					<div class="mui-divider" id="solution-divider"></div>
+					<p id="loading"></p>
+					<div id="csvDropdown" class ="padding" style="display: none;">
+						<div id="review-button" style="display:none;"><a href="#" ><i class="fa-solid fa-file-waveform" style="color: #585858;"></i> Review</a></div>
+						
+						<div class="mui-divider"></div>
+						<div id="data-button" style="display:none;"><a href="#" ><i class="fa-solid fa-code" style="color: #585858;"></i> Data</a></div>
+						<div id="definition-button"><a href="#" ><i class="fa-solid fa-code" style="color: #585858;"></i> Definition</a></div>
+
+						
+					</div>					
+				</div>
+			</div>
+			<diV style="position: fixed; bottom:20px;left:20px;"><a href="https://chromewebstore.google.com/detail/autoreview-for-power-auto/laaendfpgmhjilhjkbebekgdgfjaajif"><i class="fa-solid fa-cloud-arrow-down" style="color: #585858;"></i>  Chrome Ext</a></diV>
+			<diV style="position: fixed; bottom:20px;right:20px;"><a href="https://microsoftedge.microsoft.com/addons/detail/autoreview-for-power-auto/hcfghiolngicahomcoalaakoobpkefkj"><i class="fa-solid fa-cloud-arrow-down" style="color: #585858;"></i>  Edge Ext</a></diV>
+		<script type="text/javascript" src="config.js"></script>	
+		<script type="text/javascript" src="assets/js/xmlToJson.js"></script>
+		<script type="text/javascript" src="assets/js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="assets/js/zip.min.js"></script>
+		<script type="text/javascript" src="assets/js/script.js"></script>
+		<script type="text/javascript" src="assets/js/mui.min.js"></script>
+
+	</body>
+</html>
