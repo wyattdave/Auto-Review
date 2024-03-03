@@ -6,13 +6,14 @@ const apiSelectElem = document.getElementById("apiSelect");
 const varSelectElem = document.getElementById("variablesSelect");
 const inputSelectElem = document.getElementById("inputSelect");
 const downloadElem = document.getElementById("download");
-
-
-
 const actionIElem = document.getElementById("actionInput");
 const apiElm = document.getElementById("apiInput");
 const varElem = document.getElementById("variablesInput");
 const inputElem = document.getElementById("inputInput");
+
+downloadElem.addEventListener("click", function() {
+  downloadHTML()
+});
 
 
 downloadElem.addEventListener("click", function() {
@@ -20,6 +21,7 @@ downloadElem.addEventListener("click", function() {
 });
 
 function downloadHTML(){
+
 
   let sHTML=document.querySelector("html").innerHTML;
   let sName=document.getElementById("target-flowName").innerHTML;
@@ -36,6 +38,7 @@ function downloadHTML(){
   document.body.appendChild(element);
   element.click();
   document.body.removeChild(element);
+
 
 }
 
