@@ -1,0 +1,17 @@
+{
+    "lang": "en-us",
+    "name": "AutoReview for Power Automate",
+    "short_name": "AutoReview",
+    "description": "Create Automated Review of Power Automate Cloud Flows",
+    "start_url": "/index.htm",
+    "background_color": "#2f3d58",
+    "theme_color": "#2f3d58",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/icon v2 128.png",
+            "sizes": "128x128"
+        }
+    ]
+}
