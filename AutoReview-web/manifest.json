@@ -10,15 +10,15 @@
     "display": "standalone",
     "icons": [
         {
-            "src": "/icon v2 128.png",
+            "src": "/Auto-Review/AutoReview-web/icon v2 128.png",
             "sizes": "128x128"
         },
         {
-            "src": "/icon v2 `92`.png",
+            "src": "/Auto-Review/AutoReview-web/icon v2 `92`.png",
             "sizes": "192x192"
         },
         {
-            "src": "/icon v2 512.png",
+            "src": "/Auto-Review/AutoReview-web/icon v2 512.png",
             "sizes": "512x512"
         }
     ]
