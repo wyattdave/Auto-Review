@@ -3,7 +3,7 @@
     "name": "AutoReview for Power Automate",
     "short_name": "AutoReview",
     "description": "Create Automated Review of Power Automate Cloud Flows",
-    "start_url": "/Auto-Review/AutoReview-web/index.html",
+    "start_url": "/Auto-Review/AutoReview-web/",
     "background_color": "#044288",
     "theme_color": "white",
     "orientation": "any",
@@ -12,6 +12,14 @@
         {
             "src": "/icon v2 128.png",
             "sizes": "128x128"
+        },
+        {
+            "src": "/icon v2 `92`.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/icon v2 512.png",
+            "sizes": "512x512"
         }
     ]
 }
