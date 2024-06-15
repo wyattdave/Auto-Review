@@ -6,18 +6,18 @@ self.addEventListener('install', event => {
     const cache = await caches.open(CACHE_NAME);
     cache.addAll([
       '/',
-      '/AutoReview-web/assets/css/mui.min-ar.css',
-      '/AutoReview-web/assets/fontawsome/css/fontawesome.css',
-      '/AutoReview-web/assets/fontawsome/css/solid.min.css',
-      '/AutoReview-web/assets/css/style-ar.css',
+      '/Auto-Review/AutoReview-web/assets/css/mui.min-ar.css',
+      '/Auto-Review/AutoReview-web/assets/fontawsome/css/fontawesome.css',
+      '/Auto-Review/AutoReview-web/assets/fontawsome/css/solid.min.css',
+      '/Auto-Review/AutoReview-web/assets/css/style-ar.css',
       'https://fonts.googleapis.com/css?family=Open+Sans',
       'https://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web',
-      '/AutoReview-web/assets/js/xmlToJson.js',
-      '/AutoReview-web/assets/js/jquery-1.10.2.js',
-      '/AutoReview-web/assets/js/zip.min.js',
-      '/AutoReview-web/assets/js/script.js',
-      '/AutoReview-web/assets/js/mui.min.js',
-      '/AutoReview-web/icon v2 128.png"'
+      '/Auto-Review/AutoReview-web/assets/js/xmlToJson.js',
+      '/Auto-Review/AutoReview-web/assets/js/jquery-1.10.2.js',
+      '/Auto-Review/AutoReview-web/assets/js/zip.min.js',
+      '/Auto-Review/AutoReview-web/assets/js/script.js',
+      '/Auto-Review/AutoReview-web/assets/js/mui.min.js',
+      '/Auto-Review/AutoReview-web/icon v2 128.png"'
     ]);
   })());
 });
