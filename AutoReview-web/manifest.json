@@ -3,7 +3,7 @@
     "name": "AutoReview for Power Automate",
     "short_name": "AutoReview",
     "description": "Create Automated Review of Power Automate Cloud Flows",
-    "start_url": "/index.htm",
+    "start_url": "/Auto-Review/AutoReview-web/index.html",
     "background_color": "#044288",
     "theme_color": "white",
     "orientation": "any",
