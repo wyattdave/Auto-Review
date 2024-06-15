@@ -63,9 +63,23 @@
 		<script type="text/javascript" src="assets/js/script.js"></script>
 		<script type="text/javascript" src="assets/js/mui.min.js"></script>
 		<script>
-			if('serviceWorker' in navigator) {
-			  navigator.serviceWorker.register('service worker.js', { scope: '/Auto-Review/AutoReview-web/' });
-			}
+			  window.addEventListener('load', () => {
+				registerSW();
+				});
+			
+				// Register the Service Worker
+				async function registerSW() {
+				if ('serviceWorker' in navigator) {
+					try {
+					await navigator
+							.serviceWorker
+							.register('service worker.js');
+					}
+					catch (e) {
+					console.log('SW registration failed');
+					}
+				}
+				}
 			</script>
 
 	</body>
