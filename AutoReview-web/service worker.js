@@ -6,19 +6,19 @@ self.addEventListener('install', event => {
     const cache = await caches.open(CACHE_NAME);
     cache.addAll([
       '/',
-      '/assets/css/mui.min-ar.css',
-      '/assets/fontawsome/css/fontawesome.css',
-      '/assets/fontawsome/css/solid.min.css',
-      '/assets/css/style-ar.css',
+      'assets/css/mui.min-ar.css',
+      'assets/fontawsome/css/fontawesome.css',
+      'assets/fontawsome/css/solid.min.css',
+      'assets/css/style-ar.css',
       'http://fonts.googleapis.com/css?family=Open+Sans',
       'https://fonts.googleapis.com/css?family=Maven+Pro|Muli|Droid+Sans+Mono|Istok+Web',
-      '/assets/js/xmlToJson.js',
-      '/assets/js/jquery-1.10.2.js',
-      '/assets/js/zip.min.js',
-      '/assets/js/script.js',
-      '/assets/js/script.js',
-      '/assets/js/mui.min.js',
-      '/icon v2 128.png"'
+      'assets/js/xmlToJson.js',
+      'assets/js/jquery-1.10.2.js',
+      'assets/js/zip.min.js',
+      'assets/js/script.js',
+      'assets/js/script.js',
+      'assets/js/mui.min.js',
+      'icon v2 128.png"'
     ]);
   })());
 });
