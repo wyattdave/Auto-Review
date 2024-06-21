@@ -5,21 +5,31 @@
     "description": "Create Automated Review of Power Automate Cloud Flows",
     "start_url": "/Auto-Review/AutoReview-web/",
     "background_color": "#044288",
-    "theme_color": "white",
+    "theme_color": "#ffffff",
     "orientation": "any",
     "display": "standalone",
     "icons": [
-        {
-            "src": "/Auto-Review/AutoReview-web/icon v2 128.png",
-            "sizes": "128x128"
-        },
-        {
-            "src": "/Auto-Review/AutoReview-web/icon v2 `92`.png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "/Auto-Review/AutoReview-web/icon v2 512.png",
-            "sizes": "512x512"
-        }
+      {
+        "src": "/Auto-Review/AutoReview-web/icon v2 128.png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "/Auto-Review/AutoReview-web/icon v2 `92`.png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/Auto-Review/AutoReview-web/icon v2 512.png",
+        "sizes": "512x512"
+      }
+    ],
+    "id": "powerdevbox_autoreview",
+    "display_override": [
+      "window-controls-overlay",
+      "standalone",
+      "minimal-ui"
+    ],
+    "categories": [
+      "productivity",
+      "utilities"
     ]
-}
+  }
