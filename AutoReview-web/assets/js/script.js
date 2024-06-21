@@ -30,6 +30,7 @@ const regExpNewLine = new RegExp("(?:\r\n|\n\r|\r|\n|  )", "gm");//("(?:\r\n|\n\
 const regExpFormat = new RegExp("(?:{|})", "gm");
 const sPrem = '<img src="assets/img/premium-32.png" class="smallIcon" />';
 const sPrev = '<img src="assets/img/preview-32.png" class="smallIcon" />';
+const regExpFileID = new RegExp("[A-Z0-9]{8}-([A-Z0-9]{4}-){3}[A-Z0-9]{12}","m");
 let sortOrder;
 
 
