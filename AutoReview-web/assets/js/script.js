@@ -249,8 +249,8 @@ function review(){
               butDefinition.style = "width:100%; display:block";
               oReport = null;
               let sId="";
-              if(entry.fileName.match(regExpFileID)){
-                sId=entry.fileName.match(regExpFileID)[0]
+              if(entry.filename.match(regExpFileID)){
+                sId=entry.filename.match(regExpFileID)[0]
               }
              // try {
              
