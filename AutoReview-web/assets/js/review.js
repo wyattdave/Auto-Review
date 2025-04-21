@@ -1,3 +1,4 @@
+alert("The site hosting this javascript is getting deprecated, please create new review export");
 console.log("For Report HTML file")
 const actionSelectElem = document.getElementById("actionSelect");
 const apiSelectElem = document.getElementById("apiSelect");

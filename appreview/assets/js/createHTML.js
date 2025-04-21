@@ -1,3 +1,4 @@
+alert("The site hosting this javascript is getting deprecated, please create new review export");
 function generateCodeReport() {
 
     ////Components and code block

@@ -1,4 +1,4 @@
-
+alert("The site hosting this javascript is getting deprecated, please create new review export");
 let sSearchTerm;
 let elmContent;
 let sPreviousSearch="";
